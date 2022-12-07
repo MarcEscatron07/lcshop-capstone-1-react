@@ -3,12 +3,12 @@ import React from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
+  // Route
 } from 'react-router-dom';
 
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ErrorPage from './components/ErrorPage';
 import Welcome from './components/Welcome';
@@ -38,7 +38,7 @@ function App() {
     //   </header>
     // </div>
 
-    <>
+    <>      
       <RouterProvider router={router} />
     </>
   );
