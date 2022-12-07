@@ -10,6 +10,7 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
 import Welcome from './components/Welcome';
 import Home from './components/Home';
@@ -39,7 +40,10 @@ function App() {
     // </div>
 
     <>
-      <RouterProvider router={router} />
+      <div className="container-fluid">
+        <RouterProvider router={router} />
+        {/* <Footer /> */}
+      </div>
     </>
   );
 }
