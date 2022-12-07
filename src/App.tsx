@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
@@ -42,7 +42,7 @@ function App() {
     <>
       <div className="container-fluid">
         <RouterProvider router={router} />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

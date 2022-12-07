@@ -2,12 +2,14 @@ import React from 'react';
 
 const featuredItems = [
     {
-        class: 'featured-top',
-        imgSrc: 'images/lnd-featured-image1.jpg'
+        imgClass: 'featured-top',
+        imgSrc: 'images/lnd-featured-image1.jpg',
+        imgAlt: 'lnd-featured-image1'
     },
     {
-        class: 'featured-bottom',
-        imgSrc: 'images/lnd-featured-image2.jpg'
+        imgClass: 'featured-bottom',
+        imgSrc: 'images/lnd-featured-image2.jpg',
+        imgAlt: 'lnd-featured-image2'
     }
 ]
 
@@ -40,8 +42,8 @@ function Welcome() {
                                     {featuredItems.map(item => {
                                         return (
                                             <div>
-                                                <img className={"welcome-featured box-shade img-fluid mb-2 " + item?.class}
-                                                    src={item?.imgSrc} />
+                                                <img className={"welcome-featured box-shade img-fluid mb-2 " + item?.imgClass}
+                                                    src={item?.imgSrc} alt={item?.imgAlt}/>
                                             </div>
                                         )
                                     })}
@@ -60,9 +62,9 @@ function Welcome() {
                                     </p>
                                     <form>
                                         <div className="form-group d-inline">
-                                            <label className="mr-2" htmlFor="email-address">Email address:</label>
+                                            <label htmlFor="email-address">Email address:</label>
                                             <input 
-                                                className="form-control w-50 mr-2 mb-2 d-inline" 
+                                                className="form-control w-50 mb-2 d-inline" 
                                                 type="email" 
                                                 id="email-address" aria-describedby="emailHelp"
                                                 placeholder="Enter email" />
