@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -11,7 +12,7 @@ function Footer() {
                                 <a className="px-1" href="https://www.facebook.com/lolesports/" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook fa-2x"></i>
                                 </a>
-                                <a className="px-1" href="https://twitter.com/LCSOfficial" target="_blank" rel="noopener noreferrer">
+                                <a className="px-1" href="https://twitter.com/LCSOfficial/" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-twitter fa-2x"></i>
                                 </a>
                                 <a className="px-1" href="https://www.instagram.com/lolesports/" target="_blank" rel="noopener noreferrer">
@@ -21,10 +22,10 @@ function Footer() {
                         </div>
                         <div className="py-2 text-center">
                             <div className="mb-1">
-                                &copy; 2019 &nbsp;<a href="/home">LCShop</a>. All rights Reserved.
+                                &copy; 2019 &nbsp;<Link to="/home">LCShop</Link>. All rights Reserved.
                             </div>
                             <div>
-                                <a href="#"><u>Privacy Policy</u></a> | <a href="#"><u>Disclaimer</u></a>
+                                <Link to="#"><u>Privacy Policy</u></Link> | <Link to="#"><u>Disclaimer</u></Link>
                             </div>
                         </div>
                         <div className="d-flex py-2 justify-content-center">

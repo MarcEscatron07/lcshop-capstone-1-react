@@ -3,14 +3,13 @@ import React from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
+  // Route
 } from 'react-router-dom';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Footer from './components/Footer';
 import ErrorPage from './components/ErrorPage';
 import Welcome from './components/Welcome';
 import Home from './components/Home';
@@ -39,11 +38,8 @@ function App() {
     //   </header>
     // </div>
 
-    <>
-      <div className="container-fluid">
-        <RouterProvider router={router} />
-        <Footer />
-      </div>
+    <>      
+      <RouterProvider router={router} />
     </>
   );
 }
