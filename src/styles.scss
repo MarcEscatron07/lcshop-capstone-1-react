@@ -140,3 +140,22 @@ p {
         margin-right: 5px;
     }
 }
+
+/*Start of CSS Ruleset for Home page*/
+
+.carousel {
+	border-bottom: 5px solid #030A15;
+}
+
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-item {
+	transition: transform 3s ease, opacity .5s ease-out;
+}
+
+.carousel-control-wrapper {
+	border-radius: 100px;
+}
