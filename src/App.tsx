@@ -11,6 +11,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 
+import './styles.css';
+
 import ErrorPage from './components/pages/ErrorPage';
 import Welcome from './components/Welcome';
 import PrivacyPolicy from './components/PrivacyPolicy';
