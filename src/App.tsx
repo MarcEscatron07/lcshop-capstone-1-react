@@ -10,12 +10,16 @@ import {
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ErrorPage from './components/ErrorPage';
+import ErrorPage from './components/pages/ErrorPage';
 import Welcome from './components/Welcome';
-import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import Disclaimer from './components/Disclaimer';
+import Home from './components/pages/Home';
 
 const router = createBrowserRouter([
   { path: '/', element: <Welcome />, errorElement: <ErrorPage />},
+  { path: '/privacy-policy', element: <PrivacyPolicy /> },
+  { path: '/disclaimer', element: <Disclaimer /> },
   { path: '/home', element: <Home /> }
 ])
 

@@ -32,7 +32,7 @@ function Welcome() {
                 <div className="row">
                     <div className="col-12 d-flex">
                         <div className="welcome-header w-100 text-center justify-content align-items-center">
-                            <img src="images/lcshop-logo-header.png" alt="" />
+                            <img src="images/lcshop-logo-header.png" alt="lcs-logo" />
                             <h1 className="text-white">GEAR UP LIKE THE <strong>PROS</strong></h1>
                             <div>
                                 <button className="btn btn-outline-primary rounded-button" onClick={() => onClickAction('Show Now')}>
@@ -68,7 +68,7 @@ function Welcome() {
                                             favorite team? Subscribe to be the first to hear about our latest items, special
                                             offers, free giveaways and get equipped with our LCS Merchandise!
                                         </p>
-                                        <form>
+                                        {/* <form> */}
                                             <div className="form-group d-inline">
                                                 <label htmlFor="email-address">Email address:</label>
                                                 <input 
@@ -76,10 +76,9 @@ function Welcome() {
                                                     type="email" 
                                                     id="email-address" aria-describedby="emailHelp"
                                                     placeholder="Enter email" />
-                                                <button type="submit"
-                                                    className="welcome-subscribe-btn btn btn-primary rounded-button">Subscribe</button>
+                                                <button className="welcome-subscribe-btn btn btn-primary rounded-button">Subscribe</button>
                                             </div>
-                                        </form>
+                                        {/* </form> */}
                                     </div>
                                 </div>
                             </div>

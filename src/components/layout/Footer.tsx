@@ -25,7 +25,7 @@ function Footer() {
                                 &copy; 2019 &nbsp;<Link to="/home">LCShop</Link>. All rights Reserved.
                             </div>
                             <div>
-                                <Link to="#"><u>Privacy Policy</u></Link> | <Link to="#"><u>Disclaimer</u></Link>
+                                <Link to="/privacy-policy"><u>Privacy Policy</u></Link> | <Link to="/disclaimer"><u>Disclaimer</u></Link>
                             </div>
                         </div>
                         <div className="d-flex py-2 justify-content-center">

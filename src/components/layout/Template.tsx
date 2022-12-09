@@ -5,20 +5,26 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface IProps {
-    currentPath: string,
+    currentPath?: string,
     hasNoMarginTop?: boolean,
     children: any
 }
 
 function Template(props: IProps){
-    const currentPath = props.currentPath ?? '';
+    const currentPath: string = props.currentPath ?? '';
     // console.log('Template > currentPath: ', currentPath)
+    const urlPathsWithNoHeader: string[] = [
+        '/'
+    ];
+    const mainStyle: object = {
+        marginTop: props.hasNoMarginTop ? '0px' : '82px',
+    }
 
     return (
         <>
             <div className="container-fluid">
-                {currentPath !== '/' ? <Header /> : null}
-                <div className="main" style={{marginTop: props.hasNoMarginTop ? '0px' : '85px'}}>
+                {!urlPathsWithNoHeader.includes(currentPath) ? <Header /> : null}
+                <div className="main" style={mainStyle}>
                     {props.children}
                 </div>
                 <Footer />                
@@ -28,7 +34,7 @@ function Template(props: IProps){
 }
 
 Template.propTypes = {
-    currentPath: PropTypes.string.isRequired,
+    currentPath: PropTypes.string,
     hasNoMarginTop: PropTypes.bool
 }
 
