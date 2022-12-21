@@ -33,6 +33,17 @@ p {
   border-radius: 100px !important;
 }
 
+.card-title {
+  display: inline-block;
+  color: #0d6efd;
+  border-bottom: 2px solid #e3a900;
+  width: 100%;
+}
+
+.card-button {
+  font-family: "Play", sans-serif !important;
+}
+
 /*Start of CSS Ruleset for Header*/
 #navigation-bar {
   padding: 0.5rem 1rem;
@@ -141,6 +152,27 @@ p {
 
 .carousel-control-wrapper {
   border-radius: 100px;
+}
+
+.home-featured {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-featured .home-btn-wrapper {
+  position: relative;
+  height: 100%;
+}
+.home-featured .home-featured-title {
+  font-size: 30px;
+}
+.home-featured .home-btn-container {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 85%;
+  margin-top: -85px;
 }
 
 /*# sourceMappingURL=styles.css.map */
