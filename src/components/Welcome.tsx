@@ -3,18 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import Template from './layout/Template';
 
-const featuredItems: any[] = [
-    {
-        imgClass: 'featured-top',
-        imgSrc: 'images/lnd-featured-image1.jpg',
-        imgAlt: 'lnd-featured-image1'
-    },
-    {
-        imgClass: 'featured-bottom',
-        imgSrc: 'images/lnd-featured-image2.jpg',
-        imgAlt: 'lnd-featured-image2'
-    }
-]
+import { featuredItems } from '../variables/Welcome.variables';
 
 function Welcome() {
     const location = useLocation();
