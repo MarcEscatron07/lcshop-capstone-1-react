@@ -2,75 +2,14 @@ import React from 'react';
 
 import Template from '../layout/Template';
 
-const carouselItems: any[] = [
-    {
-        imgSrc: 'images/hom-carousel1.png',
-        imgAlt: 'Home Carousel 1',
-        slideLabel: 'Slide 1'
-    },
-    {
-        imgSrc: 'images/hom-carousel2.png',
-        imgAlt: 'Home Carousel 2',
-        slideLabel: 'Slide 2'
-    },
-    {
-        imgSrc: 'images/hom-carousel3.png',
-        imgAlt: 'Home Carousel 3',
-        slideLabel: 'Slide 3'
-    },
-    {
-        imgSrc: 'images/hom-carousel4.png',
-        imgAlt: 'Home Carousel 4',
-        slideLabel: 'Slide 4'
-    },
-];
-
-const featuredItems: any[] = [
-    {
-        featSrc: 'images/hom-featureimg1.png',
-        featTitle: 'LCS Summer Finals Gold Foil Tee',
-        featTitleColor: 'white',
-        featBtnText: 'Buy Now',
-        featBtnLink: '#'
-    },
-    {
-        featSrc: 'images/hom-featureimg2.png',
-        featTitle: "'47 Scrum Tee",
-        featTitleColor: 'black',
-        featBtnText: 'Get One',
-        featBtnLink: '#'
-    }
-];
-
-const productItems: any[] = [
-    {
-        prodSrc: 'images/home/hom-jersey-tl.webp',
-        prodAlt: 'Team Liquid LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Team Liquid 2019 LCS campaign, featuring angled designed with gold accents and the iconic team logo on the chest to show your devotion to Team Liquid!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    },
-    {
-        prodSrc: 'images/home/hom-jersey-c9.png',
-        prodAlt: 'Cloud9 LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Cloud9 2019 LCS campaign, featuring the classic black and blue theme, and benefits from having the iconic team logo on the chest to show your devotion to Cloud9!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    },
-    {
-        prodSrc: 'images/home/hom-jersey-ggs.png',
-        prodAlt: 'Golden Guardians LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Golden Guardians 2019 LCS campaign, featuring an all blue design with gold accents with the iconic team logo on the chest to show your devotion to Golden Guardians!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    }
-];
+import {
+    carouselItems,
+    featuredItems,
+    productItems,
+    collectionItems,
+    lcsTeams,
+    lcsPartners
+} from '../../variables/Home.variables';
 
 function Home() {
     
@@ -157,6 +96,84 @@ function Home() {
                                             </div>
                                         )
                                     })}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-12 p-5 text-center">
+                        <div className="p-5">
+                            <h3 className="mb-4 fw-bold">SAVE & GET THE NEWEST ITEMS IN THE SHOP!</h3>
+                            <h5 className="mb-5">Subscribe to get special offers, free giveaways, and the best deals!</h5>
+                            <a href="#"><button className="btn btn-primary">SUBSCRIBE TO OUR NEWSLETTER</button></a>
+                        </div>
+                    </div>
+
+                    <div className="col-12 p-5 bg-dark">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className="mb-5 text-center text-white">LCS 2019 COLLECTIONS</h2>
+                            </div>
+                            <div className="col-12">
+                                <div className="row row-cols-1 row-cols-md-3 g-4">
+                                    {collectionItems.map((item, idx) => {
+                                        return (
+                                            <div key={idx} className="col">
+                                                <div className="card h-100">
+                                                <img src={item?.collSrc} className="card-img-top img-fluid" alt={item?.collAlt} />
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{item?.collAlt}</h5>
+                                                    <p className="card-text">{item?.collDesc}</p>
+                                                </div>
+                                                <div className="card-footer d-flex flex-wrap justify-content-between justify-content-md-center justify-content-lg-between align-items-center">
+                                                    <small className="text-muted">{item?.collCurrency}{item?.collPrice}</small>
+                                                    <a href={item?.collBtnLink}><button className="card-button btn btn-primary">{item?.collBtnText}</button></a>                                                    
+                                                </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-12 p-5 lcs-teams-container">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className="text-center text-white">THE LCS TEAMS</h2>
+                            </div>
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="col p-3 p-md-5 mx-auto d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                                        {lcsTeams.map((team, idx) => {
+                                            return (
+                                                <div key={idx} className="text-center">
+                                                    <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid h-75 w-75" />
+                                                    <h5 className="text-white">{team?.teamAlt}</h5>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-12 p-5">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className="mb-3 text-center">OUR PARTNERS</h2>
+                            </div>
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="col p-2 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                                        {lcsPartners.map((partner, idx) => {
+                                            return (
+                                                <img className="lcs-partners img-fluid" src={partner?.partnerSrc} alt={partner?.partnerAlt} title={partner?.partnerAlt} height={partner?.imgHeight} width={partner?.imgWidth} />
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
