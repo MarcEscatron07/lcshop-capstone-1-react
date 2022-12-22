@@ -9,7 +9,7 @@ import {
     collectionItems,
     lcsTeams,
     lcsPartners
-} from '../../variables/Home.variables';
+} from '../../variables/home.variables';
 
 function Home() {
     
@@ -62,8 +62,7 @@ function Home() {
                                                 {item?.featTitle}
                                             </div>
                                             <div className="home-btn-container">
-                                                <a href={item?.featBtnLink}><button className="btn btn-outline-primary rounded">
-                                                    {item?.featBtnText}</button></a>
+                                                <button className="btn btn-outline-primary rounded">{item?.featBtnText}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -90,7 +89,7 @@ function Home() {
                                                 </div>
                                                 <div className="card-footer d-flex flex-wrap justify-content-between justify-content-md-center justify-content-lg-between align-items-center">
                                                     <small className="text-muted">{item?.prodCurrency}{item?.prodPrice}</small>
-                                                    <a href={item?.prodBtnLink}><button className="card-button btn btn-primary">{item?.prodBtnText}</button></a>                                                    
+                                                    <button className="card-button btn btn-primary">{item?.prodBtnText}</button>                                                    
                                                 </div>
                                                 </div>
                                             </div>
@@ -105,7 +104,7 @@ function Home() {
                         <div className="p-5">
                             <h3 className="mb-4 fw-bold">SAVE & GET THE NEWEST ITEMS IN THE SHOP!</h3>
                             <h5 className="mb-5">Subscribe to get special offers, free giveaways, and the best deals!</h5>
-                            <a href="#"><button className="btn btn-primary">SUBSCRIBE TO OUR NEWSLETTER</button></a>
+                            <button className="btn btn-primary">SUBSCRIBE TO OUR NEWSLETTER</button>
                         </div>
                     </div>
 
@@ -127,7 +126,7 @@ function Home() {
                                                 </div>
                                                 <div className="card-footer d-flex flex-wrap justify-content-between justify-content-md-center justify-content-lg-between align-items-center">
                                                     <small className="text-muted">{item?.collCurrency}{item?.collPrice}</small>
-                                                    <a href={item?.collBtnLink}><button className="card-button btn btn-primary">{item?.collBtnText}</button></a>                                                    
+                                                    <button className="card-button btn btn-primary">{item?.collBtnText}</button>
                                                 </div>
                                                 </div>
                                             </div>

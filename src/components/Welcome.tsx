@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import Template from './layout/Template';
 
-import { featuredItems } from '../variables/Welcome.variables';
+import { featuredItems } from '../variables/welcome.variables';
 
 function Welcome() {
     const location = useLocation();
