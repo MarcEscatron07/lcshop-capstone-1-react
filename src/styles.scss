@@ -44,6 +44,21 @@ p {
 	font-family: 'Play', sans-serif !important;
 }
 
+.breadcrumb-wrapper {
+    width: 100%;
+    background-color: #030A15;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+}
+
+.breadcrumb {
+    margin: 0px;
+    color: #fff;
+    
+    .active {
+        color: #ffc008;
+    }
+}
+
 /*Start of CSS Ruleset for Header*/
 
 #navigation-bar {
@@ -202,3 +217,6 @@ p {
 .lcs-partners {
     padding: 20px;
 }
+
+/*Start of CSS Ruleset for Shop page*/
+
