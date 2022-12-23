@@ -18,7 +18,7 @@ function Tabs(props: IProps) {
     }, [props])
 
     useEffect(() => {
-        console.log('currentTab > val', currentTab)
+        // console.log('currentTab > val', currentTab)
     }, [currentTab])
 
     const onClickAction = (tab: any) => {
