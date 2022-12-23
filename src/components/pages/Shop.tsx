@@ -3,6 +3,7 @@ import React from 'react';
 import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
 import Tabs from '../shared/Tabs';
+import Searchbar from '../shared/Searchbar';
 
 const tabs: any[] = [
     {
@@ -33,8 +34,10 @@ function Shop() {
                             <div className="col">
                                 <Tabs tabsList={tabs} defaultTab={tabs && tabs[0]?.tabName} />
                             </div>
-                            <div className="col">
-                                {/* Search component here */}
+                            <div className="col d-flex justify-content-end">
+                                <div className="d-flex">
+                                    <Searchbar />
+                                </div>
                             </div>
                         </div>
                     </div>

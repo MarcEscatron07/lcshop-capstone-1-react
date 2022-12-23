@@ -5,7 +5,7 @@ import useBreadcrumbs from "use-react-router-breadcrumbs";
 function Breadcrumb() {
     const navigate = useNavigate();
     const bcrumbs = useBreadcrumbs();
-    console.log('Breadcrumb > bcrumbs', bcrumbs)
+    // console.log('Breadcrumb > bcrumbs', bcrumbs)
 
     const onClickAction = (path: string) => {
         navigate(path);

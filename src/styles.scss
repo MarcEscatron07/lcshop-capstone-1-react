@@ -66,7 +66,7 @@ p {
 .nav-tabs {
     cursor: pointer;
     text-transform: uppercase;
-    
+
     .nav-link {
         border: none;
 
@@ -76,6 +76,20 @@ p {
             border-bottom: 2px solid #ffc008;
         }
     }
+}
+
+.searchbar {
+	border-radius: 10px;
+    margin-right: 5px;
+    &.form-control {
+        display: inline !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+.searchbar-icon {
+    margin: 0px 0px 2px 0px !important;
 }
 
 /*Start of CSS Ruleset for Header*/
