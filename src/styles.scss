@@ -53,9 +53,28 @@ p {
 .breadcrumb {
     margin: 0px;
     color: #fff;
+
+    .breadcrumb-item {
+        cursor: pointer;
+    }
     
     .active {
         color: #ffc008;
+    }
+}
+
+.nav-tabs {
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    .nav-link {
+        border: none;
+
+        &.active {
+            color: #007bff;
+            background-color: #dedede;
+            border-bottom: 2px solid #ffc008;
+        }
     }
 }
 

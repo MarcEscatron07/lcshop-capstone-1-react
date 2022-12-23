@@ -54,8 +54,24 @@ p {
   margin: 0px;
   color: #fff;
 }
+.breadcrumb .breadcrumb-item {
+  cursor: pointer;
+}
 .breadcrumb .active {
   color: #ffc008;
+}
+
+.nav-tabs {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  color: #007bff;
+  background-color: #dedede;
+  border-bottom: 2px solid #ffc008;
 }
 
 /*Start of CSS Ruleset for Header*/
