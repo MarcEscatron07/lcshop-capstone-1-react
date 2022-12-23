@@ -169,7 +169,7 @@ function Home() {
                                     <div className="col p-2 d-flex flex-column flex-lg-row justify-content-center align-items-center">
                                         {lcsPartners.map((partner, idx) => {
                                             return (
-                                                <img className="lcs-partners img-fluid" src={partner?.partnerSrc} alt={partner?.partnerAlt} title={partner?.partnerAlt} height={partner?.imgHeight} width={partner?.imgWidth} />
+                                                <img key={idx} className="lcs-partners img-fluid" src={partner?.partnerSrc} alt={partner?.partnerAlt} title={partner?.partnerAlt} height={partner?.imgHeight} width={partner?.imgWidth} />
                                             )
                                         })}
                                     </div>

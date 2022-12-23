@@ -54,6 +54,9 @@ p {
   margin: 0px;
   color: #fff;
 }
+.breadcrumb .breadcrumb-item {
+  cursor: pointer;
+}
 .breadcrumb .active {
   color: #ffc008;
 }

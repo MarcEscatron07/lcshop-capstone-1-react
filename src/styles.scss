@@ -53,6 +53,10 @@ p {
 .breadcrumb {
     margin: 0px;
     color: #fff;
+
+    .breadcrumb-item {
+        cursor: pointer;
+    }
     
     .active {
         color: #ffc008;
