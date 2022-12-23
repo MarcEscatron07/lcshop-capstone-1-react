@@ -61,6 +61,19 @@ p {
   color: #ffc008;
 }
 
+.nav-tabs {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  color: #007bff;
+  background-color: #dedede;
+  border-bottom: 2px solid #ffc008;
+}
+
 /*Start of CSS Ruleset for Header*/
 #navigation-bar {
   padding: 0.5rem 1rem;

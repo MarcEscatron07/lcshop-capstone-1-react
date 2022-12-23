@@ -63,6 +63,21 @@ p {
     }
 }
 
+.nav-tabs {
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    .nav-link {
+        border: none;
+
+        &.active {
+            color: #007bff;
+            background-color: #dedede;
+            border-bottom: 2px solid #ffc008;
+        }
+    }
+}
+
 /*Start of CSS Ruleset for Header*/
 
 #navigation-bar {

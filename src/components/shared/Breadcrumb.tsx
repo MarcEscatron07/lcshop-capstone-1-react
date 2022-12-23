@@ -21,7 +21,7 @@ function Breadcrumb() {
                             const pathname: string = match?.pathname === '/' ? '/home' : match?.pathname;
 
                             return (                                
-                                <li key={index} className={className} onClick={() => {onClickAction(pathname)}}>{breadcrumb}</li>
+                                <li key={index} className={className} onClick={() => onClickAction(pathname)}>{breadcrumb}</li>
                             )
                         })}
                     </ol>
