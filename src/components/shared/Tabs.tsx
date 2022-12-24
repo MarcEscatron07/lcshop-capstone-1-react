@@ -4,18 +4,13 @@ import PropTypes from 'prop-types';
 
 interface IProps {
     tabsList: any[],
-    defaultTab?: string
+    defaultTab?: string,
+    onSelectTab?: any
 }
 
 function Tabs(props: IProps) {
     // const navigate = useNavigate();
-    const [currentTab, setCurrentTab] = useState<string>();
-
-    useEffect(() => {
-        if(props && props.defaultTab) {
-            setCurrentTab(props.defaultTab);
-        }
-    }, [props])
+    const [currentTab, setCurrentTab] = useState<string>(props?.defaultTab ?? '');
 
     useEffect(() => {
         // console.log('currentTab > val', currentTab)
@@ -24,6 +19,9 @@ function Tabs(props: IProps) {
     const onClickAction = (tab: any) => {
         if(tab && tab.tabName) {
             setCurrentTab(tab.tabName)
+            if(props?.onSelectTab) {
+                props.onSelectTab(tab.tabName);
+            }
         }
     }
 
@@ -47,6 +45,7 @@ function Tabs(props: IProps) {
 Tabs.propTypes = {
     tabsList: PropTypes.array,
     defaultTab: PropTypes.string,
+    onSelectTab: PropTypes.func
 }
 
 export default Tabs;
