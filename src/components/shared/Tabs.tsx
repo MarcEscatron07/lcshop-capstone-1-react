@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 interface IProps {
     tabsList: any[],
-    defaultTab?: string,
-    onSelectTab?: any
+    defaultTab: string,
+    onSelectTab: any
 }
 
 function Tabs(props: IProps) {
@@ -43,9 +43,9 @@ function Tabs(props: IProps) {
 }
 
 Tabs.propTypes = {
-    tabsList: PropTypes.array,
-    defaultTab: PropTypes.string,
-    onSelectTab: PropTypes.func
+    tabsList: PropTypes.array.isRequired,
+    defaultTab: PropTypes.string.isRequired,
+    onSelectTab: PropTypes.func.isRequired
 }
 
 export default Tabs;
