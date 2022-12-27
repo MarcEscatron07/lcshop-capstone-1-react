@@ -79,8 +79,8 @@ p {
 }
 
 .searchbar {
-	border-radius: 10px;
-    margin-right: 5px;
+	border-radius: 5px 0px 0px 5px !important;
+    margin-right: 0px;
     &.form-control {
         display: inline !important;
         width: auto !important;
@@ -90,6 +90,23 @@ p {
 
 .searchbar-icon {
     margin: 0px 0px 2px 0px !important;
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+.sortby-wrapper {
+    margin-bottom: 0.5rem !important;
+
+    .sortby-select {
+        margin: 0px;
+        padding: 0.5rem !important;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.line-separator {
+    border-bottom: 1px solid gray;
 }
 
 /*Start of CSS Ruleset for Header*/
