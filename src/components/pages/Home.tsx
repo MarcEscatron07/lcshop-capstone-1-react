@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Template from '../layout/Template';
+import Card from '../shared/Card';
 
 import {
     carouselItems,
@@ -81,17 +82,14 @@ function Home() {
                                     {productItems.map((item, idx) => {
                                         return (
                                             <div key={idx} className="col">
-                                                <div className="card h-100">
-                                                <img src={item?.prodSrc} className="card-img-top img-fluid" alt={item?.prodAlt} />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{item?.prodAlt}</h5>
-                                                    <p className="card-text">{item?.prodDesc}</p>
-                                                </div>
-                                                <div className="card-footer d-flex flex-wrap justify-content-between justify-content-md-center justify-content-lg-between align-items-center">
-                                                    <small className="text-muted">{item?.prodCurrency}{item?.prodPrice}</small>
-                                                    <button className="card-button btn btn-primary">{item?.prodBtnText}</button>                                                    
-                                                </div>
-                                                </div>
+                                                <Card 
+                                                    src={item?.prodSrc}
+                                                    alt={item?.prodAlt}
+                                                    title={item?.prodAlt}
+                                                    description={item?.prodDesc}
+                                                    price={`${item?.prodCurrency}${item?.prodPrice}`}
+                                                    buttonText={item?.prodBtnText}
+                                                />
                                             </div>
                                         )
                                     })}
@@ -118,17 +116,14 @@ function Home() {
                                     {collectionItems.map((item, idx) => {
                                         return (
                                             <div key={idx} className="col">
-                                                <div className="card h-100">
-                                                <img src={item?.collSrc} className="card-img-top img-fluid" alt={item?.collAlt} />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{item?.collAlt}</h5>
-                                                    <p className="card-text">{item?.collDesc}</p>
-                                                </div>
-                                                <div className="card-footer d-flex flex-wrap justify-content-between justify-content-md-center justify-content-lg-between align-items-center">
-                                                    <small className="text-muted">{item?.collCurrency}{item?.collPrice}</small>
-                                                    <button className="card-button btn btn-primary">{item?.collBtnText}</button>
-                                                </div>
-                                                </div>
+                                                <Card 
+                                                    src={item?.collSrc}
+                                                    alt={item?.collAlt}
+                                                    title={item?.collAlt}
+                                                    description={item?.collDesc}
+                                                    price={`${item?.collCurrency}${item?.collPrice}`}
+                                                    buttonText={item?.collBtnText}
+                                                />
                                             </div>
                                         )
                                     })}

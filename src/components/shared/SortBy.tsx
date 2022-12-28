@@ -22,16 +22,18 @@ function SortBy(props: IProps) {
     }
     
     return (
-        <div className="sortby-wrapper">
-            <label className="my-0 mx-2 fw-bold" htmlFor="sort-by">Sort By</label>
-            <select className="sortby-select" name="sort" id="sort-by" onChange={onSortAction}>
-                {props.sortByList.map((sort, sortIdx) => {
-                    return (
-                        <option key={sortIdx} value={sort?.value}>{sort?.name}</option>
-                    )
-                })}
-            </select>
-        </div>
+        <>
+            <div className="sortby-wrapper">
+                <label className="my-0 mx-2 fw-bold" htmlFor="sort-by">Sort By</label>
+                <select className="sortby-select" name="sort" id="sort-by" onChange={onSortAction}>
+                    {props.sortByList.map((sort, sortIdx) => {
+                        return (
+                            <option key={sortIdx} value={sort?.value}>{sort?.name}</option>
+                        )
+                    })}
+                </select>
+            </div>
+        </>
     )
 }
 
