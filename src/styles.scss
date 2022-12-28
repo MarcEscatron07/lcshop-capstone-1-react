@@ -34,14 +34,41 @@ p {
 }
 
 .card-title {
-	display: inline-block;
-    color: #0d6efd;
-	border-bottom: 2px solid #e3a900;
-    width: 100%;
+    &.card-default {
+        display: inline-block;
+        color: #0d6efd;
+        border-bottom: 2px solid #e3a900;
+        width: 100%;
+    }
+
+    &.card-custom {
+        display: inline-block;
+        color: #000;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        padding: 1.25rem 0px;
+    }
 }
 
 .card-button {
 	font-family: 'Play', sans-serif !important;
+}
+
+.card-footer {
+    &.footer-default {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.footer-custom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .breadcrumb-wrapper {
