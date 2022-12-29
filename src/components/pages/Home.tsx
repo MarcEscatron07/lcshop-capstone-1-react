@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Template from '../layout/Template';
 import Card from '../shared/Card';
@@ -13,6 +14,13 @@ import {
 } from '../../variables/home.variables';
 
 function Home() {
+    const navigate = useNavigate();
+
+    const onClickAction = (origin: string) => {
+        if(origin === 'Newsletter') {
+            navigate('/');
+        }
+    }
     
     return (
         <>
@@ -102,7 +110,7 @@ function Home() {
                         <div className="p-5">
                             <h3 className="mb-4 fw-bold">SAVE & GET THE NEWEST ITEMS IN THE SHOP!</h3>
                             <h5 className="mb-5">Subscribe to get special offers, free giveaways, and the best deals!</h5>
-                            <button className="btn btn-primary">SUBSCRIBE TO OUR NEWSLETTER</button>
+                            <button className="btn btn-primary" onClick={() => onClickAction('Newsletter')}>SUBSCRIBE TO OUR NEWSLETTER</button>
                         </div>
                     </div>
 

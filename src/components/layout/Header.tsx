@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+
     return (
         <>
             <div className="row">
                 <div className="col">
                     <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
                         <div className="d-flex justify-content-center align-items-center">
-                            <Link className="navbar-brand" to="/">
+                            <Link className="navbar-brand" to="/home">
                                 <img id="nav-logo-img" src="images/favicon.png" alt="lcshop-logo" />
                             </Link>
                             <Link id="nav-logo-label" to="/home">
@@ -32,7 +33,7 @@ function Header() {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/home">Home</Link>
                                     <Link className="nav-link" to="/shop">Shop</Link>
-                                    <Link className="nav-link" to="#">About Us</Link>
+                                    <Link className="nav-link" to="/about-us">About Us</Link>
                                     <Link className="nav-link" to="#">Contact Us</Link>
                                 </li>
                             </ul>
