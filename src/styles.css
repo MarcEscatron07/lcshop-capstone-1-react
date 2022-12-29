@@ -48,6 +48,13 @@ p {
   padding: 1.25rem 0px;
 }
 
+.card-text.card-default {
+  text-align: start;
+}
+.card-text.card-custom {
+  text-align: center;
+}
+
 .card-button {
   font-family: "Play", sans-serif !important;
 }

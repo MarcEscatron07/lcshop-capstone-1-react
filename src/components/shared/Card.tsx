@@ -23,7 +23,7 @@ function Card(props: IProps) {
             <img src={props.src} className="card-img-top img-fluid" alt={props.alt} />
             <div className="card-body">
                 <h5 className={`card-title ${cardClassname}`}>{props.title}</h5>
-                <p className="card-text">{props.description}</p>
+                <p className={`card-text ${cardClassname}`}>{props.description}</p>
             </div>
             <div className={`card-footer ${footerClassname}`}>
                 {!props.footerLayout || props.footerLayout === 'default' ? (
