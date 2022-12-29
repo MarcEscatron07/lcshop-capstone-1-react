@@ -140,11 +140,101 @@ const shopItems: any[] = [
     },
     {
         tab: 'Casual Wear',
-        items: []
+        items: [
+            {
+                name: '\'47 Team Liquid Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: 'images/shop/casual/casual-tee-tl.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-blue.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: '\'47 CLG Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-clg.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-black.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: '\'47 Clutch Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-clutch.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-black.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: '\'47 Golden Guardians Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-ggs.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-lightblue.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: '\'47 OpTic Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-opt.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-black.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: '\'47 FlyQuest Scrum Tee', 
+                currency: '$', 
+                price: 40.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-fly.webp', 
+                srcBack: 'images/shop/casual/casual-tee-back-black.webp',
+                btnText: 'Add To Cart',
+            },
+            {
+                name: 'LCS Summer Finals Gold Foil Tee', 
+                currency: '$', 
+                price: 20.00.toFixed(2), 
+                srcFront: '/images/shop/casual/casual-tee-summer-finals.webp', 
+                srcBack: null,
+                btnText: 'Add To Cart',
+            },
+        ]
     },
     {
         tab: 'Accessories',
-        items: []
+        items: [
+            {
+                name: 'LCS 10 Teams Wristbands', 
+                currency: '$', 
+                price: 5.00.toFixed(2), 
+                srcFront: '/images/shop/accessories/acc-wristband.webp', 
+                srcBack: null,
+                btnText: 'Add To Cart',
+            },
+            {
+                name: 'LCS 10 Teams Mousepad', 
+                currency: '$', 
+                price: 20.00.toFixed(2), 
+                srcFront: '/images/shop/accessories/acc-mousepad.webp', 
+                srcBack: null,
+                btnText: 'Add To Cart',
+            },
+            {
+                name: 'LCS 10 Teams Lanyard', 
+                currency: '$', 
+                price: 5.00.toFixed(2), 
+                srcFront: '/images/shop/accessories/acc-lanyard.webp', 
+                srcBack: null,
+                btnText: 'Add To Cart',
+            },
+            {
+                name: 'LCS Summer Waterbottle', 
+                currency: '$', 
+                price: 25.00.toFixed(2), 
+                srcFront: '/images/shop/accessories/acc-waterbottle.webp', 
+                srcBack: null,
+                btnText: 'Add To Cart',
+            },
+        ]
     }
 ];
 

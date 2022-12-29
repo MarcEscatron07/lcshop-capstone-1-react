@@ -34,7 +34,11 @@ p {
 }
 
 .card-image {
-  cursor: pointer;
+  cursor: default;
+}
+.card-image.faded:hover {
+  opacity: 0.8;
+  transition: 0.5s ease;
 }
 
 .card-title.card-default {

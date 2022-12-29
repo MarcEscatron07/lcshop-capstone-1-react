@@ -80,7 +80,7 @@ const collectionItems: any[] = [
     },
     {
         collSrc: 'images/home/hom-hat-tl.png',
-        collAlt: '2019 Team Liquid Summer Finals Champs \'47 CaptainHat',
+        collAlt: '2019 Team Liquid Summer Finals Champs \'47 Captain Hat',
         collDesc: 'The Team Liquid \'47 snapback is a structured, flat-brimmed, adjustable snapback with embroidery on the front and event location and date on the side.',
         collCurrency: '$',
         collPrice: 35.00.toFixed(2),
