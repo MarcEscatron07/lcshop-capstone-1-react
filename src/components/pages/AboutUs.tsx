@@ -10,7 +10,7 @@ function AboutUs() {
                 <div className="row">
                     <div className="col-12">
                         <div className="about-header w-100 d-flex justify-content-center align-items-center">
-							<h1 className="text-white">ABOUT US</h1>
+							<h1 className="page-header text-white">ABOUT US</h1>
 						</div>
                         <Breadcrumb />
                     </div>
