@@ -19,15 +19,15 @@ function Shop() {
     const [shopSearch, setShopSearch] = useState<string>('');
 
     useEffect(() => {
-        console.log('Shop > shopTab val', shopTab)
+        // console.log('Shop > shopTab val', shopTab)
     }, [shopTab])
 
     useEffect(() => {
-        console.log('Shop > shopSort val', shopSort)
+        // console.log('Shop > shopSort val', shopSort)
     }, [shopSort])
 
     useEffect(() => {
-        console.log('Shop > shopSearch val', shopSearch)
+        // console.log('Shop > shopSearch val', shopSearch)
     }, [shopSearch])
 
     const handleSelectTab = (currentTab: string) => {
