@@ -306,3 +306,23 @@ p {
 
 /*Start of CSS Ruleset for Shop page*/
 
+/*Start of CSS Ruleset for About Us page*/
+
+.about-header {
+    background-image: 
+	linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,0.8) 60%),
+	url(../public/images/abt-building-front.jpg);    
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+
+    h1 {
+        border-bottom: 8px solid #e3a900;
+    }
+}
+
+.about-info {
+    padding: 3rem 4rem 3rem 4rem;
+}
