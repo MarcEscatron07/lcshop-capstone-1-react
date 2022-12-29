@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { navRoutesList } from '../../routes';
+
 function Header() {
 
     return (
@@ -31,10 +33,11 @@ function Header() {
                         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/home">Home</Link>
-                                    <Link className="nav-link" to="/shop">Shop</Link>
-                                    <Link className="nav-link" to="/about-us">About Us</Link>
-                                    <Link className="nav-link" to="#">Contact Us</Link>
+                                    {navRoutesList.map((route, routeIdx) => {
+                                        return (
+                                            <Link key={routeIdx} className="nav-link" to={route?.path}>{route?.routeName}</Link>
+                                        )
+                                    })}
                                 </li>
                             </ul>
                         </div>

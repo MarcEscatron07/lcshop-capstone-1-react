@@ -145,6 +145,10 @@ p {
     border-bottom: 1px solid gray;
 }
 
+.page-header {
+    border-bottom: 8px solid #e3a900;
+}
+
 /*Start of CSS Ruleset for Header*/
 
 #navigation-bar {
@@ -317,12 +321,43 @@ p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 400px;
-
-    h1 {
-        border-bottom: 8px solid #e3a900;
-    }
 }
 
 .about-info {
     padding: 3rem 4rem 3rem 4rem;
+}
+
+/*Start of CSS Ruleset for Contact Us page*/
+
+.contact-form-container {
+    label {
+        color: #fff;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 0px; 
+        box-sizing: border-box; 
+        margin-top: 5px !important; 
+        margin-bottom: 15px !important; 
+        resize: none; 
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            background-color: #45a049;
+        }
+    }
 }
