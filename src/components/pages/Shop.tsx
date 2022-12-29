@@ -5,54 +5,13 @@ import Breadcrumb from '../shared/Breadcrumb';
 import Tabs from '../shared/Tabs';
 import SortBy from '../shared/SortBy';
 import Searchbar from '../shared/Searchbar';
+import Card from '../shared/Card';
 
-const tabs: any[] = [
-    {
-        tabName: 'Jerseys',
-        tabHeader: 'LCS Team Stage Jerseys',
-    },
-    {
-        tabName: 'Casual Wear',
-        tabHeader: 'LCS Casual Wear'
-    },
-    {
-        tabName: 'Accessories',
-        tabHeader: 'LCS Accessories'
-    }
-];
-
-const sortBy: any[] = [
-    {
-        name: 'LATEST',
-        value: 'sort-latest'
-    },
-    {
-        name: 'FEATURED',
-        value: 'sort-featured'
-    },
-    {
-        name: 'BEST SELLING',
-        value: 'sort-best-selling'
-    },
-    {
-        name: 'ALPHABETICAL, A-Z',
-        value: 'sort-alpha-asc'
-    },
-    {
-        name: 'ALPHABETICAL, Z-A',
-        value: 'sort-alpha-desc'
-    },
-    {
-        name: 'PRICE (ASCENDING)',
-        value: 'sort-price-asc'
-    },
-    {
-        name: 'PRICE (DESCENDING)',
-        value: 'sort-price-desc'
-    },
-];
-
-
+import {
+    tabs,
+    sortBy,
+    shopItems
+} from '../../variables/shop.variables';
 
 function Shop() {
     const [shopTab, setShopTab] = useState<string>(tabs[0]?.tabName);
@@ -125,8 +84,30 @@ function Shop() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col">
-                                {/* Shop items here (Jerseys, Casual Wear, Accessories) */}
+                            <div className="col p-3">
+                                <div className="row">
+                                    {shopItems.map((shopItem: any) => {
+                                        if((shopItem?.tab && shopItem?.items) && shopItem?.tab === shopTab) {
+                                            return shopItem?.items.map((item: any, idx: number) => {
+                                                return (
+                                                    <div key={idx} className="col-md-3 py-3">
+                                                        <Card 
+                                                            src={item?.srcFront}
+                                                            alt={item?.name}
+                                                            title={item?.name}
+                                                            description={`${item?.currency}${item?.price}`}
+                                                            buttonText={item?.btnText}
+                                                            cardLayout="custom"
+                                                            footerLayout="custom"
+                                                        />
+                                                    </div>
+                                                )
+                                            })
+                                        } else {
+                                            return null;
+                                        }
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>

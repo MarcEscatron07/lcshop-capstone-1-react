@@ -51,6 +51,16 @@ p {
     }
 }
 
+.card-text {
+    &.card-default {
+        text-align: start;
+    }
+
+    &.card-custom {
+        text-align: center;
+    }
+}
+
 .card-button {
 	font-family: 'Play', sans-serif !important;
 }
