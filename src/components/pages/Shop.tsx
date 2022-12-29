@@ -95,10 +95,10 @@ function Shop() {
                                                             src={item?.srcFront}
                                                             alt={item?.name}
                                                             title={item?.name}
-                                                            description={`${item?.currency}${item?.price}`}
+                                                            price={`${item?.currency}${item?.price}`}
                                                             buttonText={item?.btnText}
-                                                            cardLayout="custom"
-                                                            footerLayout="custom"
+                                                            cardLayout="centered"
+                                                            imgObj={{front: item?.srcFront, back: item?.srcBack}}
                                                         />
                                                     </div>
                                                 )
