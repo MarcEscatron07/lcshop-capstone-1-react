@@ -167,18 +167,33 @@ p {
 .navbar {
 	border-bottom: 7px solid #007bff;
 	border-right: 10px solid #e3a900;
-}
 
-.navbar-light .navbar-nav .nav-link {
-	color: #fff;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-	color: #ffc008;
+    .nav-link {
+        color: #fff;
+        &:hover {
+            color: #b88c07;
+        }
+        &.active {
+            color: #ffc008;
+        }
+    }
 }
 
 .nav-link {
     display: unset !important;
+}
+
+.select-default {
+    &:invalid {
+        color: gray !important;
+        option {
+            color: #000;
+        }
+    }
+
+    option[value=""] {
+        color: gray;
+    }
 }
 
 /*Start of CSS Ruleset for Error page*/

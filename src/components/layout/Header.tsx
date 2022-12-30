@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { navRoutesList } from '../../routes';
 
 function Header() {
+    const location = useLocation();
+    // console.log("Header > location", location)
 
     return (
         <>
@@ -35,7 +37,7 @@ function Header() {
                                 <li className="nav-item">
                                     {navRoutesList.map((route, routeIdx) => {
                                         return (
-                                            <Link key={routeIdx} className="nav-link" to={route?.path}>{route?.routeName}</Link>
+                                            <Link key={routeIdx} className={`nav-link${location?.pathname === route?.path ? ' active' : ''}`} to={route?.path}>{route?.routeName}</Link>
                                         )
                                     })}
                                 </li>
