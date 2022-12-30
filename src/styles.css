@@ -170,6 +170,16 @@ p {
   display: unset !important;
 }
 
+.select-default:invalid {
+  color: gray !important;
+}
+.select-default:invalid option {
+  color: #000;
+}
+.select-default option[value=""] {
+  color: gray;
+}
+
 /*Start of CSS Ruleset for Error page*/
 #error-page {
   display: flex;

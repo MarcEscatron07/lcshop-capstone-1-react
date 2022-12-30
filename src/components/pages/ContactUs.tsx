@@ -3,7 +3,10 @@ import React from 'react';
 import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
 
+import { countries } from '../../variables/contact-us.variables';
+
 function ContactUs() {
+    console.log('ContactUs > countries', countries)
 
     return (
         <>
@@ -47,20 +50,13 @@ function ContactUs() {
                                     <input type="text" id="lname" name="lname" placeholder="Your last name.." />
 
                                     <label htmlFor="country">Country:</label>
-                                    <select className="select-default" id="country" name="country">
-                                        <option value="us">Australia</option>
-                                        <option value="us">Austria</option>
-                                        <option value="us">Belgium</option>
-                                        <option value="us">Brunei</option>
-                                        <option value="ca">Canada</option>
-                                        <option value="ca">China</option>
-                                        <option value="ca">Germany</option>
-                                        <option value="ca">Japan</option>
-                                        <option value="ca">Malaysia</option>
-                                        <option value="ph">Philippines</option>
-                                        <option value="ph">Singapore</option>
-                                        <option value="us">United Kingdom</option>
-                                        <option value="us">United States</option>
+                                    <select className="select-default" id="country" name="country" required>
+                                        <option value="" disabled selected>Select country..</option>
+                                        {countries.map((country, idx) => {
+                                            return (
+                                                <option key={idx} value={country?.code}>{country?.name}</option>
+                                            )
+                                        })}
                                     </select>
 
                                     <label htmlFor="subject">Subject:</label>

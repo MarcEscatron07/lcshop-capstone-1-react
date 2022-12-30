@@ -183,6 +183,19 @@ p {
     display: unset !important;
 }
 
+.select-default {
+    &:invalid {
+        color: gray !important;
+        option {
+            color: #000;
+        }
+    }
+
+    option[value=""] {
+        color: gray;
+    }
+}
+
 /*Start of CSS Ruleset for Error page*/
 
 #error-page {
