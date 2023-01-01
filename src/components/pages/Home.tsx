@@ -11,7 +11,7 @@ import {
     collectionItems,
     lcsTeams,
     lcsPartners
-} from '../../variables/Home.variables';
+} from '../../variables/Home';
 
 function Home() {
     const navigate = useNavigate();
