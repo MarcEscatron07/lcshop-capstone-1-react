@@ -10,13 +10,14 @@ import Card from '../shared/Card';
 import {
     tabs,
     sortBy,
-    shopItems
+    items
 } from '../../variables/shop.variables';
 
 function Shop() {
-    const [shopTab, setShopTab] = useState<string>(tabs[0]?.tabName);
-    const [shopSort, setShopSort] = useState<string>(sortBy[0]?.value);
+    const [shopTab, setShopTab] = useState<string>(tabs[0]?.tabName ?? 'Jerseys');
+    const [shopSort, setShopSort] = useState<string>(sortBy[0]?.value ?? '');
     const [shopSearch, setShopSearch] = useState<string>('');
+    const [shopItems, setShopItems] = useState<any[]>(items ?? []);
 
     useEffect(() => {
         // console.log('Shop > shopTab val', shopTab)
@@ -28,7 +29,23 @@ function Shop() {
 
     useEffect(() => {
         // console.log('Shop > shopSearch val', shopSearch)
+
+        if(shopSearch.trim() !== '') {
+            const newItems: any[] = JSON.parse(JSON.stringify(items)); // deep clone the object
+            newItems.map((nItem: any) => {
+                nItem['items'] = nItem['items'] && nItem['items'].filter((item: any) => item?.name && 
+                    item?.name.toLowerCase().includes(shopSearch.toLowerCase()));
+                return nItem;
+            })
+            setShopItems(newItems);
+        } else {
+            setShopItems(items ?? []);
+        }
     }, [shopSearch])
+
+    useEffect(() => {
+        // console.log('Shop > shopItems val', shopItems)
+    }, [shopItems])
 
     const handleSelectTab = (currentTab: string) => {
         setShopTab(currentTab);
@@ -39,7 +56,7 @@ function Shop() {
         setShopSort(value);
     }
 
-    const handleClickSearch = (value: string) => {
+    const handleSearch = (value: string) => {
         setShopSearch(value);
     }
 
@@ -56,6 +73,34 @@ function Shop() {
         }
     }
 
+    function renderShopItems() {
+        return shopItems.map((sItem: any) => {
+            if(sItem?.tab === shopTab) {
+                if(sItem?.items && sItem?.items.length > 0) {
+                    return sItem?.items?.map((item: any, idx: number) => {
+                        return (
+                            <div key={idx} className="col-md-3 py-3">
+                                <Card 
+                                    src={item?.srcFront}
+                                    alt={item?.name}
+                                    title={item?.name}
+                                    price={`${item?.currency}${item?.price}`}
+                                    buttonText={item?.btnText}
+                                    cardLayout="centered"
+                                    imgObj={{front: item?.srcFront, back: item?.srcBack}}
+                                />
+                            </div>
+                        ) 
+                    })
+                } else {
+                    return <p className="fw-bold">Nothing Here...</p>;
+                }
+            } else {
+                return null;
+            }
+        })
+    }
+
     return (
         <>
             <Template>
@@ -70,43 +115,21 @@ function Shop() {
                                     <Tabs tabsList={tabs} defaultTab={tabs && tabs[0]?.tabName} onSelectTab={handleSelectTab} />
                                 </div>
                                 <div className="d-md-flex py-2">
-                                    <Searchbar onClickSearch={handleClickSearch}/>
+                                    <Searchbar type="onChange" onSearch={handleSearch}/>
                                 </div>                                
                             </div>
                         </div>
                         <div className="row line-separator pb-4">
                             <div className="col">
                                 <div className="tab-panel">
-                                    {tabs.map((tab, tabIdx) => {
-                                        return renderTabContent(tab, tabIdx);
-                                    })}
+                                    {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col p-3">
                                 <div className="row">
-                                    {shopItems.map((shopItem: any) => {
-                                        if((shopItem?.tab && shopItem?.items) && shopItem?.tab === shopTab) {
-                                            return shopItem?.items.map((item: any, idx: number) => {
-                                                return (
-                                                    <div key={idx} className="col-md-3 py-3">
-                                                        <Card 
-                                                            src={item?.srcFront}
-                                                            alt={item?.name}
-                                                            title={item?.name}
-                                                            price={`${item?.currency}${item?.price}`}
-                                                            buttonText={item?.btnText}
-                                                            cardLayout="centered"
-                                                            imgObj={{front: item?.srcFront, back: item?.srcBack}}
-                                                        />
-                                                    </div>
-                                                )
-                                            })
-                                        } else {
-                                            return null;
-                                        }
-                                    })}
+                                    {renderShopItems()}
                                 </div>
                             </div>
                         </div>
