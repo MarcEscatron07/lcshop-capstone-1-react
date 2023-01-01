@@ -11,7 +11,7 @@ import {
     tabs,
     sortBy,
     items
-} from '../../variables/shop.variables';
+} from '../../variables/Shop.variables';
 
 function Shop() {
     const [shopTab, setShopTab] = useState<string>(tabs[0]?.tabName ?? 'Jerseys');

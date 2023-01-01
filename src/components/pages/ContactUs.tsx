@@ -3,7 +3,7 @@ import React from 'react';
 import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
 
-import { countries } from '../../variables/contact-us.variables';
+import { countries } from '../../variables/Contact-us.variables';
 
 function ContactUs() {
     // console.log('ContactUs > countries', countries)
