@@ -6,7 +6,7 @@ import Breadcrumb from '../shared/Breadcrumb';
 import { countries } from '../../variables/contact-us.variables';
 
 function ContactUs() {
-    console.log('ContactUs > countries', countries)
+    // console.log('ContactUs > countries', countries)
 
     return (
         <>

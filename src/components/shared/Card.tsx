@@ -13,10 +13,13 @@ interface IProps {
 }
 
 function Card(props: IProps) {
-    const [imgSrc, setImgSrc] = useState<string>(props.src);
+    const [imgSrc, setImgSrc] = useState<string>(props.src ?? '');
 
     const cardImgClassname: string = !props.imgObj?.back ? ' faded' : '';
     const cardBodyClassname: string = !props.cardLayout || props.cardLayout === 'default' ? ' card-default' : ' card-centered';
+
+
+    useEffect(() => { setImgSrc(props.src); }, [props.src])
 
     useEffect(() => {
         // console.log('Card > imgSrc', imgSrc)

@@ -3,6 +3,7 @@ import React from 'react';
 import Template from './layout/Template';
 
 function Disclaimer() {
+    
     return (
         <>
             <Template>

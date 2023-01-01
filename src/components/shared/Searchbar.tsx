@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 interface IProps {
-    onClickSearch: any
+    type: 'onChange' | 'onClick';
+    onSearch: any
 }
 
 function Searchbar(props: IProps) {
@@ -12,29 +13,33 @@ function Searchbar(props: IProps) {
         // console.log('Search > val', search)
     }, [search])
 
-    const handleSearch = (e: any) => {
-        // console.log('handleSearch > event', e?.target?.value)
-        setSearch(e?.target?.value);
+    const handleChangeSearch = (e: any) => {
+        // console.log('handleChangeSearch > event', e?.target?.value)        
+        if(props.type === 'onChange' && props.onSearch) {
+            props.onSearch(e?.target?.value)
+        } else {
+            setSearch(e?.target?.value);
+        }
     }
 
     const handleClickSearch = () => {
-        if(props.onClickSearch) {
-            props.onClickSearch(search)
+        if(props.type === 'onClick' && props.onSearch) {
+            props.onSearch(search)
         }
     }
 
     return (
         <>
             <div className="searchbar-wrapper">
-                <input className="searchbar form-control" type="search" placeholder="Search.." aria-label="Search" onChange={handleSearch} />
-                <button className="searchbar-icon btn btn-outline-primary" type="submit" onClick={handleClickSearch}><i className="fa fa-search fa-lg"></i></button>
+                <input className="searchbar form-control shadow-none" type="search" placeholder="Search.." aria-label="Search" onChange={handleChangeSearch} />
+                <button className="searchbar-icon btn btn-outline-primary" type="submit" onClick={handleClickSearch} disabled={props.type === 'onChange'}><i className="fa fa-search fa-lg"></i></button>
             </div>
         </>
     )
 }
 
 Searchbar.propTypes = {
-    onClickSearch: PropTypes.func.isRequired
+    onSearch: PropTypes.func.isRequired
 }
 
 export default Searchbar;

@@ -4,6 +4,7 @@ import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
 
 function AboutUs() {
+	
     return (
         <>
             <Template>

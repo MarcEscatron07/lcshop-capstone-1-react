@@ -44,7 +44,7 @@ const sortBy: any[] = [
     },
 ];
 
-const shopItems: any[] = [
+const items: any[] = [
     {
         tab: 'Jerseys',
         items: [
@@ -241,5 +241,5 @@ const shopItems: any[] = [
 export {
     tabs,
     sortBy,
-    shopItems
+    items
 }
