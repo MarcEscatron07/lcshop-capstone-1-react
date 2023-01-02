@@ -31,27 +31,22 @@ function Welcome() {
                         </div>
                     </div>
 
-                    <div className="col-12 d-flex">
+                    <div className="col-12 pb-4 pb-md-0 d-flex">
                         <div className="row welcome-body">
-                            <div className="col-md-4">
-                                <div className="p-3 p-md-5 flex-column flex-md-row justify-content-between align-items-center">
-                                    <div className="mx-auto px-3">
-                                        {featuredItems.map((item: any, idx: number) => {
-                                            return (
-                                                <div key={idx}>
-                                                    <img className={"welcome-featured box-shade img-fluid mb-2 " + item?.imgClass}
-                                                        src={item?.imgSrc} alt={item?.imgAlt}/>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
+                            <div className="col-md-4 p-4 p-md-5 pe-md-2">
+                                <div className="flex-column flex-md-row justify-content-between align-items-center">
+                                    {featuredItems.map((item: any, idx: number) => {
+                                        return (
+                                            <img key={idx} className={"welcome-featured box-shade img-fluid mb-2 " + item?.imgClass} src={item?.imgSrc} alt={item?.imgAlt}/>
+                                        )
+                                    })}
                                 </div>
                             </div>
-                            <div className="col-md-8 d-flex justify-content-center align-items-center">
-                                <div className="welcome-subscribe-box d-flex">
-                                    <div className="box-shade bg-light p-5">
+                            <div className="col-md-8 p-4 p-md-5 ps-md-2">
+                                <div className="welcome-subscribe-box">
+                                    <div className="h-100 box-shade bg-light p-5">
                                         <h1 className="md-heading mb-4 d-inline-block">BECOME A MEMBER</h1>
-                                        <p>
+                                        <p className="mb-5">
                                             An enthusiast of the League of Legends Pro-scene? Passionate in representing
                                             your
                                             favorite team? Subscribe to be the first to hear about our latest items, special
@@ -61,11 +56,11 @@ function Welcome() {
                                             <div className="form-group d-inline">
                                                 <label htmlFor="email-address">Email address:</label>
                                                 <input 
-                                                    className="form-control w-50 mb-2 d-inline" 
+                                                    className="form-control w-50 mb-md-2 me-md-2 d-inline" 
                                                     type="email" 
                                                     id="email-address" aria-describedby="emailHelp"
                                                     placeholder="Enter email" />
-                                                <button className="welcome-subscribe-btn btn btn-primary rounded-button">Subscribe</button>
+                                                <button className="btn btn-primary rounded-button">Subscribe</button>
                                             </div>
                                         {/* </form> */}
                                     </div>
