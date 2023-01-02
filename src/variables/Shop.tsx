@@ -156,10 +156,11 @@ const items: any[] = [
             {
                 name: '\'47 Team Liquid Scrum Tee', 
                 currency: '$', 
-                price: 40.00.toFixed(2), 
+                price: 50.00.toFixed(2), 
                 srcFront: 'images/shop/casual/casual-tee-tl.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-blue.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-11-17')
             },
             {
                 name: '\'47 CLG Scrum Tee', 
@@ -168,14 +169,16 @@ const items: any[] = [
                 srcFront: '/images/shop/casual/casual-tee-clg.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-10-16')
             },
             {
                 name: '\'47 Clutch Scrum Tee', 
                 currency: '$', 
-                price: 40.00.toFixed(2), 
+                price: 30.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-clutch.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-09-15')
             },
             {
                 name: '\'47 Golden Guardians Scrum Tee', 
@@ -184,14 +187,16 @@ const items: any[] = [
                 srcFront: '/images/shop/casual/casual-tee-ggs.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-lightblue.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-08-14')
             },
             {
                 name: '\'47 OpTic Scrum Tee', 
                 currency: '$', 
-                price: 40.00.toFixed(2), 
+                price: 30.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-opt.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-07-13')
             },
             {
                 name: '\'47 FlyQuest Scrum Tee', 
@@ -200,6 +205,7 @@ const items: any[] = [
                 srcFront: '/images/shop/casual/casual-tee-fly.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-06-12')
             },
             {
                 name: 'LCS Summer Finals Gold Foil Tee', 
@@ -208,6 +214,7 @@ const items: any[] = [
                 srcFront: '/images/shop/casual/casual-tee-summer-finals.webp', 
                 srcBack: null,
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-05-11')
             },
         ]
     },
@@ -218,19 +225,21 @@ const items: any[] = [
                 name: 'LCS 10 Teams Wristbands', 
                 desc: 'Show your appreciation for the LCS legacy with these wristbands representing all ten teams. Each team logo is printed around the wristbands, so your team spirit will always be seen by others who will look at it!',
                 currency: '$', 
-                price: 5.00.toFixed(2), 
+                price: 10.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-wristband.webp', 
                 srcBack: null,
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-11-17')
             },
             {
                 name: 'LCS 10 Teams Mousepad', 
                 desc: 'Show your appreciation for the LCS legacy with this mousepad representing all ten teams. Each team logo is printed on the bottom left of the mousepad, so your team spirit will always be on display while you play!',
                 currency: '$', 
-                price: 20.00.toFixed(2), 
+                price: 15.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-mousepad.webp', 
                 srcBack: null,
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-10-16')
             },
             {
                 name: 'LCS 10 Teams Lanyard', 
@@ -240,14 +249,16 @@ const items: any[] = [
                 srcFront: '/images/shop/accessories/acc-lanyard.webp', 
                 srcBack: null,
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-09-15')
             },
             {
                 name: 'LCS Summer Waterbottle', 
                 currency: '$', 
-                price: 25.00.toFixed(2), 
+                price: 20.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-waterbottle.webp', 
                 srcBack: null,
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-08-14')
             },
         ]
     }

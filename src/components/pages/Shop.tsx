@@ -91,9 +91,9 @@ function Shop() {
         setShopSearch(value);
     }
 
-    const dateFormatter = (date: moment.Moment) => {
-        return (<>Date Added: <b>{moment(date).format('MMM. DD, YYYY')}</b></>);
-    }
+    // const dateFormatter = (date: moment.Moment) => {
+    //     return (<>Date Added: <b>{moment(date).format('MMM. DD, YYYY')}</b></>);
+    // }
 
     function renderTabContent(tab: any, idx: number) {
         if(shopTab === tab?.tabName) {
@@ -118,7 +118,7 @@ function Shop() {
                                     src={item?.srcFront}
                                     alt={item?.name}
                                     title={item?.name}
-                                    description={item?.dateAdded && dateFormatter(item?.dateAdded)}
+                                    // description={item?.dateAdded && dateFormatter(item?.dateAdded)}
                                     price={`${item?.currency}${item?.price}`}
                                     buttonText={item?.btnText}
                                     cardLayout="centered"
