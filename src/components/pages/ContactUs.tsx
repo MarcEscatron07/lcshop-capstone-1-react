@@ -50,8 +50,8 @@ function ContactUs() {
                                     <input type="text" id="lname" name="lname" placeholder="Your last name.." />
 
                                     <label htmlFor="country">Country:</label>
-                                    <select className="select-default" id="country" name="country" required>
-                                        <option value="" disabled selected>Select country..</option>
+                                    <select className="select-default" id="country" name="country" defaultValue={""} required>
+                                        <option value="" disabled>Select country..</option>
                                         {countries.map((country, idx) => {
                                             return (
                                                 <option key={idx} value={country?.code}>{country?.name}</option>
