@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 interface IProps {
     type: 'onChange' | 'onClick';
     onSearch: any
@@ -32,7 +35,9 @@ function Searchbar(props: IProps) {
         <>
             <div className="searchbar-wrapper">
                 <input className="searchbar form-control shadow-none" type="search" placeholder="Search.." aria-label="Search" onChange={handleChangeSearch} />
-                <button className="searchbar-icon btn btn-outline-primary" type="submit" onClick={handleClickSearch} disabled={props.type === 'onChange'}><i className="fa fa-search fa-lg"></i></button>
+                <button className="searchbar-icon btn btn-outline-primary" type="submit" onClick={handleClickSearch} disabled={props.type === 'onChange'}>
+                    <FontAwesomeIcon icon={faSearch} />
+                </button>
             </div>
         </>
     )

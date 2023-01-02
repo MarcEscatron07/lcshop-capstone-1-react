@@ -153,7 +153,7 @@ function Shop() {
                             </div>   
                         </div>
                         <div className="row line-separator mb-4">
-                            {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
+                            {tabs.map((tab: any, tabIdx: number) => renderTabContent(tab, tabIdx))}
                             <div className="col-6 col-md-3 py-2 justify-content-end align-items-center">
                                 <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
                             </div>

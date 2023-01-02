@@ -49,15 +49,15 @@ function Home() {
                     <div className="col-12 p-0">
                         <div id="home-carousel" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-indicators">
-                                {carouselItems.map((item,idx) => {
+                                {carouselItems.map((item: any, idx: number) => {
                                     return (
                                         <button key={idx} type="button" data-bs-target="#home-carousel" data-bs-slide-to={idx} className={idx === 0 ? "active" : ""} aria-current="true" aria-label={item?.slideLabel}></button>
                                     )
                                 })}
                             </div>
                             <div className="carousel-inner">
-                                {carouselItems.map((item,idx) => {
-                                    let className: string = idx === 0 ? "carousel-item active" : "carousel-item";
+                                {carouselItems.map((item: any,idx: number) => {
+                                    const className: string = idx === 0 ? "carousel-item active" : "carousel-item";
                                     return (
                                         <div key={idx} className={className} data-bs-interval="5000">
                                             <img src={item?.imgSrc} className="d-block w-100" alt={item?.imgAlt} />
@@ -83,7 +83,7 @@ function Home() {
 
                     <div className="col-12 p-0">
                         <div className="row">
-                            {featuredItems.map((item,idx) => {
+                            {featuredItems.map((item: any, idx: number) => {
                                 return (
                                     <div key={idx} className="col-12 col-md home-featured box-shade w-100" style={{backgroundImage: `url(${item?.featSrc})`}}>
                                         <div className="home-btn-wrapper text-center text-white">
@@ -142,7 +142,7 @@ function Home() {
                             <div className="col-12">
                                 <div className="row">
                                     <div className="col p-3 p-md-5 mx-auto d-flex flex-column flex-lg-row justify-content-center align-items-center">
-                                        {lcsTeams.map((team, idx) => {
+                                        {lcsTeams.map((team: any, idx: number) => {
                                             return (
                                                 <div key={idx} className="text-center">
                                                     <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid" />
@@ -164,7 +164,7 @@ function Home() {
                             <div className="col-12">
                                 <div className="row">
                                     <div className="col p-2 d-flex flex-column flex-lg-row justify-content-center align-items-center">
-                                        {lcsPartners.map((partner, idx) => {
+                                        {lcsPartners.map((partner: any, idx: number) => {
                                             return (
                                                 <img key={idx} className="lcs-partners img-fluid" src={partner?.partnerSrc} alt={partner?.partnerAlt} title={partner?.partnerAlt} height={partner?.imgHeight} width={partner?.imgWidth} />
                                             )
