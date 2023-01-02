@@ -32,7 +32,7 @@ function Tabs(props: IProps) {
                     const className: string = currentTab === tab?.tabName ? 'nav-link active' : 'nav-link';
 
                     return (
-                        <li className="nav-item p-2 p-md-0">
+                        <li key={idx} className="nav-item p-2 p-md-0">
                             <div key={idx} className={className} onClick={() => onClickAction(tab)}>{tab?.tabName}</div>
                         </li>
                     )

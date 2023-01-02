@@ -95,17 +95,12 @@ function Shop() {
         return (<>Date Added: <b>{moment(date).format('MMM. DD, YYYY')}</b></>);
     }
 
-    function renderTabContent(tab: any, tabIdx: number) {
+    function renderTabContent(tab: any, idx: number) {
         if(shopTab === tab?.tabName) {
             return (
-                <>
-                    <div key={`header-${tabIdx}`} className="col-6 col-md-9 py-2">
-                        <h3>{tab?.tabHeader}</h3>
-                    </div>
-                    <div key={`sort-${tabIdx}`} className="col-6 col-md-3 py-2 justify-content-end align-items-center">
-                        <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
-                    </div>
-                </>
+                <div key={idx} className="col-6 col-md-9 py-2">
+                    <h3>{tab?.tabHeader}</h3>
+                </div>
             )
         } else {
             return null;
@@ -159,6 +154,9 @@ function Shop() {
                         </div>
                         <div className="row line-separator mb-4">
                             {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
+                            <div className="col-6 col-md-3 py-2 justify-content-end align-items-center">
+                                <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
+                            </div>
                         </div>
                         <div className="row">
                             <div className="col p-3">
