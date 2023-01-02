@@ -7,19 +7,39 @@ import Card from '../shared/Card';
 import {
     carouselItems,
     featuredItems,
-    productItems,
-    collectionItems,
     lcsTeams,
     lcsPartners
 } from '../../variables/Home';
 
+import {
+    items
+} from '../../variables/Shop';
+
 function Home() {
     const navigate = useNavigate();
+    const lcsJerseys: any[] = items && items[0] && items[0].items ? items[0]?.items.slice(0, 3) : [];
+    const lcsCollections: any[] = items && items[2] && items[2].items ? items[2]?.items.slice(0, 3) : [];
 
     const onClickAction = (origin: string) => {
         if(origin === 'Newsletter') {
             navigate('/');
         }
+    }
+
+    function renderHomeItems(item: any, idx: number) {
+        return (
+            <div key={idx} className="col">
+                <Card 
+                    src={item?.srcFront}
+                    alt={item?.name}
+                    title={item?.name}
+                    description={item?.desc}
+                    price={`${item?.currency}${item?.price}`}
+                    buttonText={item?.btnText}
+                    imgObj={{front: item?.srcFront, back: item?.srcBack}}
+                />
+            </div>
+        )
     }
     
     return (
@@ -65,7 +85,7 @@ function Home() {
                         <div className="row">
                             {featuredItems.map((item,idx) => {
                                 return (
-                                    <div key={idx} className="col home-featured box-shade w-100" style={{backgroundImage: `url(${item?.featSrc})`}}>
+                                    <div key={idx} className="col-12 col-md home-featured box-shade w-100" style={{backgroundImage: `url(${item?.featSrc})`}}>
                                         <div className="home-btn-wrapper text-center text-white">
                                             <div className="home-featured-title mt-3" style={{color: `${item?.featTitleColor}`}}>
                                                 {item?.featTitle}
@@ -87,20 +107,7 @@ function Home() {
                             </div>
                             <div className="col-12">
                                 <div className="row row-cols-1 row-cols-md-3 g-4">
-                                    {productItems.map((item, idx) => {
-                                        return (
-                                            <div key={idx} className="col">
-                                                <Card 
-                                                    src={item?.prodSrc}
-                                                    alt={item?.prodAlt}
-                                                    title={item?.prodAlt}
-                                                    description={item?.prodDesc}
-                                                    price={`${item?.prodCurrency}${item?.prodPrice}`}
-                                                    buttonText={item?.prodBtnText}
-                                                />
-                                            </div>
-                                        )
-                                    })}
+                                    {lcsJerseys.map((item: any, idx: number) => renderHomeItems(item, idx))}
                                 </div>
                             </div>
                         </div>
@@ -121,20 +128,7 @@ function Home() {
                             </div>
                             <div className="col-12">
                                 <div className="row row-cols-1 row-cols-md-3 g-4">
-                                    {collectionItems.map((item, idx) => {
-                                        return (
-                                            <div key={idx} className="col">
-                                                <Card 
-                                                    src={item?.collSrc}
-                                                    alt={item?.collAlt}
-                                                    title={item?.collAlt}
-                                                    description={item?.collDesc}
-                                                    price={`${item?.collCurrency}${item?.collPrice}`}
-                                                    buttonText={item?.collBtnText}
-                                                />
-                                            </div>
-                                        )
-                                    })}
+                                    {lcsCollections.map((item: any, idx: number) => renderHomeItems(item, idx))}
                                 </div>
                             </div>
                         </div>
@@ -151,7 +145,7 @@ function Home() {
                                         {lcsTeams.map((team, idx) => {
                                             return (
                                                 <div key={idx} className="text-center">
-                                                    <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid h-75 w-75" />
+                                                    <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid" />
                                                     <h5 className="text-white">{team?.teamAlt}</h5>
                                                 </div>
                                             )

@@ -27,16 +27,16 @@ function Tabs(props: IProps) {
 
     return (
         <>
-            <ul className="nav nav-tabs">
-                <li className="nav-item">
-                    {props.tabsList.map((tab, idx) => {
-                        const className: string = currentTab === tab?.tabName ? 'nav-link active' : 'nav-link';
+            <ul className="nav nav-tabs">                
+                {props.tabsList.map((tab, idx) => {
+                    const className: string = currentTab === tab?.tabName ? 'nav-link active' : 'nav-link';
 
-                        return (
+                    return (
+                        <li className="nav-item p-2 p-md-0">
                             <div key={idx} className={className} onClick={() => onClickAction(tab)}>{tab?.tabName}</div>
-                        )
-                    })}
-                </li>
+                        </li>
+                    )
+                })}
             </ul>
         </>
     )

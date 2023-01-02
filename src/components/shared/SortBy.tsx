@@ -24,7 +24,7 @@ function SortBy(props: IProps) {
     return (
         <>
             <div className="sortby-wrapper">
-                <label className="my-0 mx-2 fw-bold" htmlFor="sort-by">Sort By</label>
+                <label className="my-0 me-2 fw-bold" htmlFor="sort-by">Sort By</label>
                 <select className="sortby-select" name="sort" id="sort-by" onChange={onSortAction}>
                     {props.sortByList.map((sort, sortIdx) => {
                         return (
