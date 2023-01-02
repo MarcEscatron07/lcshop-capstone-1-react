@@ -52,10 +52,11 @@ function Shop() {
 
     useEffect(() => {
         // console.log('Shop > shopSort val', shopSort)
-        // console.log('Shop > shopItems val', shopItems)
-
-        setShopItems(sortItems(shopItems, shopSort));
-    }, [shopSort, shopItems])
+         
+        if(shopSort.trim() !== '') {
+            setShopItems(prevShopItems => sortItems(prevShopItems, shopSort));
+        }
+    }, [shopSort])
 
     useEffect(() => {
         // console.log('Shop > shopSearch val', shopSearch)
@@ -72,6 +73,10 @@ function Shop() {
             setShopItems(items ?? []);
         }
     }, [shopSearch])
+
+    useEffect(() => {
+        // console.log('Shop > shopItems val', shopItems)
+    }, [shopItems])
 
     const handleSelectTab = (currentTab: string) => {
         setShopTab(currentTab);
