@@ -21,10 +21,10 @@ function Header() {
                             </Link>
                         </div>
                         <button 
-                            className="navbar-toggler bg-white" 
+                            className="navbar-toggler bg-warning" 
                             type="button" 
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent"
                             aria-expanded="false"
                             aria-label="Toggle navigation"
@@ -33,14 +33,14 @@ function Header() {
                         </button>
 
                         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    {navRoutesList.map((route, routeIdx) => {
-                                        return (
-                                            <Link key={routeIdx} className={`nav-link${location?.pathname === route?.path ? ' active' : ''}`} to={route?.path}>{route?.routeName}</Link>
-                                        )
-                                    })}
-                                </li>
+                            <ul className="navbar-nav">                                
+                                {navRoutesList.map((route, routeIdx) => {
+                                    return (
+                                        <li key={routeIdx} className="nav-item p-2 p-md-0">
+                                            <Link className={`nav-link${location?.pathname === route?.path ? ' active' : ''}`} to={route?.path}>{route?.routeName}</Link>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </div>
                     </nav>

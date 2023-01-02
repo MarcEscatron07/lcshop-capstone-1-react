@@ -98,10 +98,14 @@ function Shop() {
     function renderTabContent(tab: any, tabIdx: number) {
         if(shopTab === tab?.tabName) {
             return (
-                <div key={tabIdx} className="d-flex justify-content-between align-items-center">
-                    <h3 className="mb-2">{tab?.tabHeader}</h3>
-                    <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
-                </div>
+                <>
+                    <div className="col p-2">
+                        <h3>{tab?.tabHeader}</h3>
+                    </div>
+                    <div className="col p-2 pe-0 d-flex justify-content-start justify-content-md-end align-items-center">
+                        <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
+                    </div>
+                </>
             )
         } else {
             return null;
@@ -146,7 +150,7 @@ function Shop() {
                     </div>
                     <div className="col-12 px-5 py-4">
                         <div className="row mb-5">
-                            <div className="col d-md-flex justify-content-between">
+                            <div className="col d-md-flex justify-content-between p-0">
                                 <div className="d-md-flex py-2">
                                     <Tabs tabsList={tabs} defaultTab={tabs && tabs[0]?.tabName} onSelectTab={handleSelectTab} />
                                 </div>
@@ -156,11 +160,7 @@ function Shop() {
                             </div>
                         </div>
                         <div className="row line-separator pb-4">
-                            <div className="col">
-                                <div className="tab-panel">
-                                    {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
-                                </div>
-                            </div>
+                            {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
                         </div>
                         <div className="row">
                             <div className="col p-3">

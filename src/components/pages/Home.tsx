@@ -65,7 +65,7 @@ function Home() {
                         <div className="row">
                             {featuredItems.map((item,idx) => {
                                 return (
-                                    <div key={idx} className="col home-featured box-shade w-100" style={{backgroundImage: `url(${item?.featSrc})`}}>
+                                    <div key={idx} className="col-12 col-md home-featured box-shade w-100" style={{backgroundImage: `url(${item?.featSrc})`}}>
                                         <div className="home-btn-wrapper text-center text-white">
                                             <div className="home-featured-title mt-3" style={{color: `${item?.featTitleColor}`}}>
                                                 {item?.featTitle}
@@ -151,7 +151,7 @@ function Home() {
                                         {lcsTeams.map((team, idx) => {
                                             return (
                                                 <div key={idx} className="text-center">
-                                                    <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid h-75 w-75" />
+                                                    <img src={team?.teamSrc} alt={team?.teamAlt} className="img-fluid" />
                                                     <h5 className="text-white">{team?.teamAlt}</h5>
                                                 </div>
                                             )
