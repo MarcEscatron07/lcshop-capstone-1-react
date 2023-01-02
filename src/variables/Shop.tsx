@@ -48,6 +48,7 @@ const items: any[] = [
         items: [
             { 
                 name: 'CLG 2019 Summer Split LCS Jersey', 
+                desc: 'Made exclusively for the CLG 2019 Summer Split LCS campaign, featuring angled designed with light blue accents and the iconic team logo on the chest to show your devotion to Counter Logic Gaming!', 
                 currency: '$', 
                 price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-clg.webp', 
@@ -57,6 +58,7 @@ const items: any[] = [
             },
             { 
                 name: 'Team Liquid LCS 2019 Playoff Jersey', 
+                desc: 'Made exclusively for the Team Liquid 2019 LCS campaign, featuring angled designed with gold accents and the iconic team logo on the chest to show your devotion to Team Liquid!',
                 currency: '$', 
                 price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-tl.webp', 
@@ -66,6 +68,7 @@ const items: any[] = [
             },
             { 
                 name: 'Cloud9 LCS Jersey 2019', 
+                desc: 'Made exclusively for the Cloud9 2019 LCS campaign, featuring angled designed with sky blue accents and the iconic team logo on the chest to show your devotion to Cloud9!',
                 currency: '$', 
                 price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-c9.webp', 
@@ -213,6 +216,7 @@ const items: any[] = [
         items: [
             {
                 name: 'LCS 10 Teams Wristbands', 
+                desc: 'Show your appreciation for the LCS legacy with these wristbands representing all ten teams. Each team logo is printed around the wristbands, so your team spirit will always be seen by others who will look at it!',
                 currency: '$', 
                 price: 5.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-wristband.webp', 
@@ -221,6 +225,7 @@ const items: any[] = [
             },
             {
                 name: 'LCS 10 Teams Mousepad', 
+                desc: 'Show your appreciation for the LCS legacy with this mousepad representing all ten teams. Each team logo is printed on the bottom left of the mousepad, so your team spirit will always be on display while you play!',
                 currency: '$', 
                 price: 20.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-mousepad.webp', 
@@ -229,6 +234,7 @@ const items: any[] = [
             },
             {
                 name: 'LCS 10 Teams Lanyard', 
+                desc: 'Show your appreciation for the LCS legacy with this lanyard representing all ten teams. Each team logo is sublimated on each side of the fabric, so your team spirit will always be visible!',
                 currency: '$', 
                 price: 5.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-lanyard.webp', 

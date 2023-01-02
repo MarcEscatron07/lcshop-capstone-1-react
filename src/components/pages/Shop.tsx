@@ -99,10 +99,10 @@ function Shop() {
         if(shopTab === tab?.tabName) {
             return (
                 <>
-                    <div className="col p-2">
+                    <div key={`header-${tabIdx}`} className="col p-2">
                         <h3>{tab?.tabHeader}</h3>
                     </div>
-                    <div className="col p-2 pe-0 d-flex justify-content-start justify-content-md-end align-items-center">
+                    <div key={`sort-${tabIdx}`} className="col p-2 pe-0 d-flex justify-content-start justify-content-md-end align-items-center">
                         <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
                     </div>
                 </>
@@ -112,9 +112,9 @@ function Shop() {
         }
     }
 
-    function renderShopItems() {
-        return shopItems.map((sItem: any, sIdx: number) => {
-            if(sItem?.tab === shopTab) {
+    function renderShopItems(sItems: any[], sTab: string) {
+        return sItems.map((sItem: any, sIdx: number) => {
+            if(sItem?.tab === sTab) {
                 if(sItem?.items && sItem?.items.length > 0) {
                     return sItem?.items?.map((item: any, idx: number) => {
                         return (
@@ -165,7 +165,7 @@ function Shop() {
                         <div className="row">
                             <div className="col p-3">
                                 <div className="row">
-                                    {renderShopItems()}
+                                    {renderShopItems(shopItems, shopTab)}
                                 </div>
                             </div>
                         </div>

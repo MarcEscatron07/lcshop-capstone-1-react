@@ -38,66 +38,6 @@ const featuredItems: any[] = [
     }
 ];
 
-const productItems: any[] = [
-    {
-        prodSrc: 'images/home/hom-jersey-tl.webp',
-        prodAlt: 'Team Liquid LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Team Liquid 2019 LCS campaign, featuring angled designed with gold accents and the iconic team logo on the chest to show your devotion to Team Liquid!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    },
-    {
-        prodSrc: 'images/home/hom-jersey-c9.png',
-        prodAlt: 'Cloud9 LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Cloud9 2019 LCS campaign, featuring the classic black and blue theme, and benefits from having the iconic team logo on the chest to show your devotion to Cloud9!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    },
-    {
-        prodSrc: 'images/home/hom-jersey-ggs.png',
-        prodAlt: 'Golden Guardians LCS Jersey 2019',
-        prodDesc: 'Made exclusively for the Golden Guardians 2019 LCS campaign, featuring an all blue design with gold accents with the iconic team logo on the chest to show your devotion to Golden Guardians!',
-        prodCurrency: '$',
-        prodPrice: 80.00.toFixed(2),
-        prodBtnText: 'Add To Cart',
-        prodBtnLink: '#'
-    }
-];
-
-const collectionItems: any[] = [
-    {
-        collSrc: 'images/home/hom-hoodie.png',
-        collAlt: 'LCS Pop Hoodie',
-        collDesc: 'Intensify your league fandom level with this LCS Pop Hoodie. With bright colors, large league logo and the logos of the ten teams, everyone will know your favorite league!',
-        collCurrency: '$',
-        collPrice: 55.00.toFixed(2),
-        collBtnText: 'Add To Cart',
-        collBtnLink: '#'
-    },
-    {
-        collSrc: 'images/home/hom-hat-tl.png',
-        collAlt: '2019 Team Liquid Summer Finals Champs \'47 Captain Hat',
-        collDesc: 'The Team Liquid \'47 snapback is a structured, flat-brimmed, adjustable snapback with embroidery on the front and event location and date on the side.',
-        collCurrency: '$',
-        collPrice: 35.00.toFixed(2),
-        collBtnText: 'Add To Cart',
-        collBtnLink: '#'
-    },
-    {
-        collSrc: 'images/home/hom-lanyard-full.png',
-        collAlt: 'LCS 10 Teams Lanyard',
-        collDesc: 'Show your appreciation for the LCS legacy with this lanyard representing all ten teams. Each team logo is sublimated on each side of the fabric, so your team spirit will always be visible.',
-        collCurrency: '$',
-        collPrice: 5.00.toFixed(2),
-        collBtnText: 'Add To Cart',
-        collBtnLink: '#'
-    }
-];
-
 const lcsTeams: any[] = [
     {
         teamSrc: 'https://cdn.shopify.com/s/files/1/0022/7128/1254/t/6/assets/100t.png?1313',
@@ -177,8 +117,6 @@ const lcsPartners: any[] = [
 export {
     carouselItems,
     featuredItems,
-    productItems,
-    collectionItems,
     lcsTeams,
     lcsPartners
 }
