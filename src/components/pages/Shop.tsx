@@ -99,10 +99,10 @@ function Shop() {
         if(shopTab === tab?.tabName) {
             return (
                 <>
-                    <div key={`header-${tabIdx}`} className="col p-2">
+                    <div key={`header-${tabIdx}`} className="col-6 col-md-9 py-2">
                         <h3>{tab?.tabHeader}</h3>
                     </div>
-                    <div key={`sort-${tabIdx}`} className="col p-2 pe-0 d-flex justify-content-start justify-content-md-end align-items-center">
+                    <div key={`sort-${tabIdx}`} className="col-6 col-md-3 py-2 justify-content-end align-items-center">
                         <SortBy sortByList={sortBy} defaultSort={sortBy && sortBy[0]?.value} onSelectSort={handleSelectSort} />
                     </div>
                 </>
@@ -149,17 +149,15 @@ function Shop() {
                         <Breadcrumb />
                     </div>
                     <div className="col-12 px-5 py-4">
-                        <div className="row mb-5">
-                            <div className="col d-md-flex justify-content-between p-0">
-                                <div className="d-md-flex py-2">
-                                    <Tabs tabsList={tabs} defaultTab={tabs && tabs[0]?.tabName} onSelectTab={handleSelectTab} />
-                                </div>
-                                <div className="d-md-flex py-2">
-                                    <Searchbar type="onChange" onSearch={handleSearch}/>
-                                </div>                                
+                        <div className="row mb-4">
+                            <div className="col-12 col-md-9 py-2">
+                                <Tabs tabsList={tabs} defaultTab={tabs && tabs[0]?.tabName} onSelectTab={handleSelectTab} />
                             </div>
+                            <div className="col-12 col-md-3 py-2 justify-content-start justify-content-md-end align-items-center">
+                                <Searchbar type="onChange" onSearch={handleSearch}/>
+                            </div>   
                         </div>
-                        <div className="row line-separator pb-4">
+                        <div className="row line-separator mb-4">
                             {tabs.map((tab, tabIdx) => renderTabContent(tab, tabIdx))}
                         </div>
                         <div className="row">

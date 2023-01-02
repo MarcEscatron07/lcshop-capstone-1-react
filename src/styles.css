@@ -104,22 +104,25 @@ p {
   border-bottom: 2px solid #ffc008;
 }
 
-.searchbar {
+.searchbar-wrapper {
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+.searchbar-wrapper .searchbar {
   border-radius: 5px 0px 0px 5px !important;
   margin-right: 0px;
 }
-.searchbar.form-control {
+.searchbar-wrapper .searchbar.form-control {
   display: inline !important;
-  width: auto !important;
-  max-width: 100% !important;
+  width: 100% !important;
 }
-
-.searchbar-icon {
-  margin: 0px 0px 2px 0px !important;
+.searchbar-wrapper .searchbar-icon {
   border-radius: 0px 5px 5px 0px !important;
 }
 
 .sortby-wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
   margin-bottom: 0.5rem !important;
 }
 .sortby-wrapper .sortby-select {
