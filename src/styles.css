@@ -110,13 +110,13 @@ p {
 }
 .searchbar-wrapper .searchbar {
   border-radius: 5px 0px 0px 5px !important;
-  margin-right: 0px;
 }
 .searchbar-wrapper .searchbar.form-control {
   display: inline !important;
   width: 100% !important;
 }
 .searchbar-wrapper .searchbar-icon {
+  width: 50px;
   border-radius: 0px 5px 5px 0px !important;
 }
 
