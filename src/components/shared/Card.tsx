@@ -5,7 +5,7 @@ interface IProps {
     src: string,
     alt: string,
     title: string,
-    description?: string,
+    description?: any,
     price?: string,
     buttonText?: string,
     cardLayout?: 'default' | 'centered',
@@ -45,7 +45,7 @@ function Card(props: IProps) {
                 </div>
                 <div className="card-body">
                     <h5 className={`card-title${cardBodyClassname}`}>{props.title}</h5>
-                    {props.description && props.description.trim() !== '' ? (<p className={`card-text${cardBodyClassname}`}>{props.description}</p>) : null}
+                    {props.description ? (<p className={`card-text${cardBodyClassname}`}>{props.description}</p>) : null}
                 </div>
                 <div className="card-footer">
                     <small className="text-muted fw-bold">{props?.price ?? '$0.00'}</small>
@@ -60,7 +60,7 @@ Card.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.any,
     price: PropTypes.string,
     buttonText: PropTypes.string,
     cardLayout: PropTypes.string,
