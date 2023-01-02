@@ -52,7 +52,7 @@ function ContactUs() {
                                     <label htmlFor="country">Country:</label>
                                     <select className="select-default" id="country" name="country" defaultValue={""} required>
                                         <option value="" disabled>Select country..</option>
-                                        {countries.map((country, idx) => {
+                                        {countries.map((country: any, idx: number) => {
                                             return (
                                                 <option key={idx} value={country?.code}>{country?.name}</option>
                                             )

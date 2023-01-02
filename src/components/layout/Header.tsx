@@ -1,11 +1,25 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 import { navRoutesList } from '../../routes';
 
 function Header() {
     const location = useLocation();
     // console.log("Header > location", location)
+
+    function renderHeaderLinks(route: any, idx: number) {
+        return (
+            <li key={idx} className="nav-item p-2 p-md-0">
+                {route?.routeName === 'Cart' ? <span className="d-none d-lg-inline text-white fw-bold">|</span> : null}
+                <Link className={`nav-link${location?.pathname === route?.path ? ' active' : ''}`} to={route?.path}>{
+                    route?.routeName === 'Cart' ? <FontAwesomeIcon icon={faCartShopping} /> : <>{route?.routeName}</>
+                }</Link>
+            </li>
+        )
+    }
 
     return (
         <>
@@ -34,13 +48,7 @@ function Header() {
 
                         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                             <ul className="navbar-nav">                                
-                                {navRoutesList.map((route, routeIdx) => {
-                                    return (
-                                        <li key={routeIdx} className="nav-item p-2 p-md-0">
-                                            <Link className={`nav-link${location?.pathname === route?.path ? ' active' : ''}`} to={route?.path}>{route?.routeName}</Link>
-                                        </li>
-                                    )
-                                })}
+                                {navRoutesList.map((route: any, routeIdx: number) => renderHeaderLinks(route, routeIdx))}
                             </ul>
                         </div>
                     </nav>

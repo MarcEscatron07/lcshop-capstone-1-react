@@ -26,7 +26,7 @@ function SortBy(props: IProps) {
             <div className="sortby-wrapper align-items-center">
                 <label className="my-0 me-2 fw-bold" htmlFor="sort-by">Sort By</label>
                 <select className="sortby-select" name="sort" id="sort-by" onChange={onSortAction}>
-                    {props.sortByList.map((sort, sortIdx) => {
+                    {props.sortByList.map((sort: any, sortIdx: number) => {
                         return (
                             <option key={sortIdx} value={sort?.value}>{sort?.name}</option>
                         )

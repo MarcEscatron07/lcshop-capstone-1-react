@@ -28,7 +28,7 @@ function Tabs(props: IProps) {
     return (
         <>
             <ul className="nav nav-tabs">                
-                {props.tabsList.map((tab, idx) => {
+                {props.tabsList.map((tab: any, idx: number) => {
                     const className: string = currentTab === tab?.tabName ? 'nav-link active' : 'nav-link';
 
                     return (

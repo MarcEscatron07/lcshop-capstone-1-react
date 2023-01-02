@@ -22,12 +22,12 @@ function Template(props: IProps){
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="template-wrapper container-fluid">
                 {!urlPathsWithNoHeader.includes(currentPath) ? <Header /> : null}
                 <div className="main" style={mainStyle}>
                     {props.children}
                 </div>
-                <Footer />                
+                <Footer />
             </div>
         </>
     )

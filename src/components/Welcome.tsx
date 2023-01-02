@@ -36,7 +36,7 @@ function Welcome() {
                             <div className="col-md-4">
                                 <div className="p-3 p-md-5 flex-column flex-md-row justify-content-between align-items-center">
                                     <div className="mx-auto px-3">
-                                        {featuredItems.map((item, idx) => {
+                                        {featuredItems.map((item: any, idx: number) => {
                                             return (
                                                 <div key={idx}>
                                                     <img className={"welcome-featured box-shade img-fluid mb-2 " + item?.imgClass}

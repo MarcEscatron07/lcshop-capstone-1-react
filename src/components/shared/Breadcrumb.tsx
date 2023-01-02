@@ -16,7 +16,7 @@ function Breadcrumb() {
             <div className="breadcrumb-wrapper">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        {bcrumbs.map(({  match, breadcrumb }, index) => {
+                        {bcrumbs.map(({ match, breadcrumb }, index: number) => {
                             const className: string = index === bcrumbs.length - 1 ? 'breadcrumb-item active' : 'breadcrumb-item';
                             const pathname: string = match?.pathname === '/' ? '/home' : match?.pathname;
 
