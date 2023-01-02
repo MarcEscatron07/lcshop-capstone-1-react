@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 function Footer() {
     
     return (
@@ -10,14 +13,14 @@ function Footer() {
                     <footer className="d-flex px-4 flex-column flex-md-row justify-content-around justify-content-md-between align-items-center">
                         <div className="d-flex py-2">
                             <div className="d-flex justify-content-center align-items-center">
-                                <a className="px-1" href="https://www.facebook.com/lolesports/" target="_blank" rel="noopener noreferrer">
-                                    <i className="fab fa-facebook fa-2x"></i>
+                                <a className="footer-socials px-1" href="https://www.facebook.com/lolesports/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faFacebook} />
                                 </a>
-                                <a className="px-1" href="https://twitter.com/LCSOfficial/" target="_blank" rel="noopener noreferrer">
-                                    <i className="fab fa-twitter fa-2x"></i>
+                                <a className="footer-socials px-1" href="https://twitter.com/LCSOfficial/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faTwitter} />
                                 </a>
-                                <a className="px-1" href="https://www.instagram.com/lolesports/" target="_blank" rel="noopener noreferrer">
-                                    <i className="fab fa-instagram fa-2x"></i>
+                                <a className="footer-socials px-1" href="https://www.instagram.com/lolesports/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faInstagram} />
                                 </a>
                             </div>
                         </div>
