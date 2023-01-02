@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const tabs: any[] = [
     {
         tabName: 'Jerseys',
@@ -19,12 +21,8 @@ const sortBy: any[] = [
         value: 'sort-latest'
     },
     {
-        name: 'FEATURED',
-        value: 'sort-featured'
-    },
-    {
-        name: 'BEST SELLING',
-        value: 'sort-best-selling'
+        name: 'OLDEST',
+        value: 'sort-oldest'
     },
     {
         name: 'ALPHABETICAL, A-Z',
@@ -51,26 +49,29 @@ const items: any[] = [
             { 
                 name: 'CLG 2019 Summer Split LCS Jersey', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-clg.webp', 
                 srcBack: 'images/shop/jerseys/jersey-clg-back.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-11-17')
             },
             { 
                 name: 'Team Liquid LCS 2019 Playoff Jersey', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-tl.webp', 
                 srcBack: 'images/shop/jerseys/jersey-tl-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-10-16')
             },
             { 
                 name: 'Cloud9 LCS Jersey 2019', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-c9.webp', 
                 srcBack: 'images/shop/jerseys/jersey-c9-back.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-09-15')
             },
             { 
                 name: 'Echo Fox LCS Jersey 2019', 
@@ -79,22 +80,25 @@ const items: any[] = [
                 srcFront: 'images/shop/jerseys/jersey-fox.webp', 
                 srcBack: 'images/shop/jerseys/jersey-fox-back.webp',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-08-14')
             },
             { 
                 name: 'TSM LCS Jersey 2019', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-tsm.png', 
                 srcBack: 'images/shop/jerseys/jersey-tsm-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-07-13')
             },
             { 
                 name: 'FlyQuest LCS Jersey 2019', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-fly.png', 
                 srcBack: 'images/shop/jerseys/jersey-fly-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-06-12')
             },
             { 
                 name: 'OpTic LCS Jersey 2019', 
@@ -103,6 +107,7 @@ const items: any[] = [
                 srcFront: 'images/shop/jerseys/jersey-opt.png', 
                 srcBack: 'images/shop/jerseys/jersey-opt-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-05-11')
             },
             { 
                 name: 'Clutch Gaming LCS Jersey 2019', 
@@ -111,22 +116,25 @@ const items: any[] = [
                 srcFront: 'images/shop/jerseys/jersey-clutch.png', 
                 srcBack: 'images/shop/jerseys/jersey-clutch-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-04-10')
             },
             { 
                 name: 'Golden Guardians LCS Jersey 2019', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-ggs.png', 
                 srcBack: 'images/shop/jerseys/jersey-ggs-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-03-09')
             },
             { 
                 name: '100 Thieves LCS Jersey 2019', 
                 currency: '$', 
-                price: 60.00.toFixed(2), 
+                price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-100t.png', 
                 srcBack: 'images/shop/jerseys/jersey-100t-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-02-08')
             },
             { 
                 name: 'CLG LCS Jersey 2019', 
@@ -135,6 +143,7 @@ const items: any[] = [
                 srcFront: 'images/shop/jerseys/jersey-clg-alt.png', 
                 srcBack: 'images/shop/jerseys/jersey-clg-alt-back.png',
                 btnText: 'Add To Cart',
+                dateAdded: moment('2019-01-07')
             },
         ]
     },

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 
 import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
@@ -13,11 +14,37 @@ import {
     items
 } from '../../variables/Shop';
 
+const sortItems = (items: any[] = [], sort: string = '') => {
+    let newItems: any[] = JSON.parse(JSON.stringify(items)); // deep clone the object
+    newItems = newItems.map((nItem: any) => {
+        nItem['items'] = nItem['items'] && nItem['items'].sort((a: any, b: any) => {
+            switch(sort) {
+                case 'sort-latest':
+                    return moment(b?.dateAdded).diff(a?.dateAdded);                        
+                case 'sort-oldest':
+                    return moment(a?.dateAdded).diff(b?.dateAdded);
+                case 'sort-alpha-asc':
+                    return a?.name > b?.name ? 1 : -1;
+                case 'sort-alpha-desc':
+                    return a?.name < b?.name ? 1 : -1;
+                case 'sort-price-asc':
+                    return a?.price > b?.price ? 1 : -1;
+                case 'sort-price-desc':
+                    return a?.price < b?.price ? 1 : -1;
+                default:
+                    return 1;
+            }
+        });
+        return nItem;
+    })
+    return newItems;
+}
+
 function Shop() {
     const [shopTab, setShopTab] = useState<string>(tabs[0]?.tabName ?? 'Jerseys');
     const [shopSort, setShopSort] = useState<string>(sortBy[0]?.value ?? '');
     const [shopSearch, setShopSearch] = useState<string>('');
-    const [shopItems, setShopItems] = useState<any[]>(items ?? []);
+    const [shopItems, setShopItems] = useState<any[]>(sortItems(items, sortBy[0]?.value ?? '') ?? []);
 
     useEffect(() => {
         // console.log('Shop > shopTab val', shopTab)
@@ -25,7 +52,10 @@ function Shop() {
 
     useEffect(() => {
         // console.log('Shop > shopSort val', shopSort)
-    }, [shopSort])
+        // console.log('Shop > shopItems val', shopItems)
+
+        setShopItems(sortItems(shopItems, shopSort));
+    }, [shopSort, shopItems])
 
     useEffect(() => {
         // console.log('Shop > shopSearch val', shopSearch)
@@ -43,10 +73,6 @@ function Shop() {
         }
     }, [shopSearch])
 
-    useEffect(() => {
-        // console.log('Shop > shopItems val', shopItems)
-    }, [shopItems])
-
     const handleSelectTab = (currentTab: string) => {
         setShopTab(currentTab);
     }
@@ -58,6 +84,10 @@ function Shop() {
 
     const handleSearch = (value: string) => {
         setShopSearch(value);
+    }
+
+    const dateFormatter = (date: moment.Moment) => {
+        return (<>Date Added: <b>{moment(date).format('MMM. DD, YYYY')}</b></>);
     }
 
     function renderTabContent(tab: any, tabIdx: number) {
@@ -74,7 +104,7 @@ function Shop() {
     }
 
     function renderShopItems() {
-        return shopItems.map((sItem: any) => {
+        return shopItems.map((sItem: any, sIdx: number) => {
             if(sItem?.tab === shopTab) {
                 if(sItem?.items && sItem?.items.length > 0) {
                     return sItem?.items?.map((item: any, idx: number) => {
@@ -84,6 +114,7 @@ function Shop() {
                                     src={item?.srcFront}
                                     alt={item?.name}
                                     title={item?.name}
+                                    description={item?.dateAdded && dateFormatter(item?.dateAdded)}
                                     price={`${item?.currency}${item?.price}`}
                                     buttonText={item?.btnText}
                                     cardLayout="centered"
@@ -93,7 +124,7 @@ function Shop() {
                         ) 
                     })
                 } else {
-                    return <p className="fw-bold">Nothing Here...</p>;
+                    return <p key={sIdx} className="fw-bold">Nothing Here...</p>;
                 }
             } else {
                 return null;
