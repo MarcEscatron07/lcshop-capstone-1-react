@@ -244,7 +244,7 @@ p {
 
 .welcome-body .welcome-featured {
   width: 100%;
-  height: 150px;
+  height: 170px;
 }
 .welcome-body .featured-top {
   border-radius: 20px 180px;
@@ -253,10 +253,8 @@ p {
   border-radius: 180px 20px;
 }
 .welcome-body .welcome-subscribe-box {
-  width: 90%;
-}
-.welcome-body .welcome-subscribe-btn {
-  margin-left: 10px;
+  height: 100%;
+  width: 100%;
 }
 .welcome-body label {
   margin-right: 5px;
