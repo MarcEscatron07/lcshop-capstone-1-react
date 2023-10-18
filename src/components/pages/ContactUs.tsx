@@ -3,7 +3,7 @@ import React from 'react';
 import Template from '../layout/Template';
 import Breadcrumb from '../shared/Breadcrumb';
 
-import { countries } from '../../variables/ContactUs';
+import { countries, email } from '../../variables/ContactUs';
 
 function ContactUs() {
     // console.log('ContactUs > countries', countries)
@@ -35,8 +35,7 @@ function ContactUs() {
                                         <p className="mt-2 text-white">12312 W Olympic Blvd, Los Angeles, CA 90064, United States
                                         </p>
                                         <div className="d-flex flex-wrap p-2 mt-2 bg-white">
-                                            <p className="m-0 px-2">You may email us at: <strong
-                                                    className="text-primary">customerservice@wearenations.com</strong></p>
+                                            <p className="m-0 px-2">You may email us at: <strong className="text-primary">{email}</strong></p>
                                         </div>
                                     </div>
                                 </div>
