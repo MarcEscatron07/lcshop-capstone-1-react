@@ -44,10 +44,10 @@ function ContactUs() {
                             <div className="col-md-5">
                                 <div className="contact-form-container p-3 p-md-4 bg-dark h-100">
                                     <label htmlFor="fname">First Name:</label>
-                                    <input type="text" id="fname" name="fname" placeholder="Your name.." />
+                                    <input type="text" id="fname" name="fname" placeholder="Jericho" />
 
                                     <label htmlFor="lname">Last Name:</label>
-                                    <input type="text" id="lname" name="lname" placeholder="Your last name.." />
+                                    <input type="text" id="lname" name="lname" placeholder="Swain" />
 
                                     <label htmlFor="country">Country:</label>
                                     <select className="select-default" id="country" name="country" defaultValue={""} required>

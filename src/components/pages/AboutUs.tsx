@@ -25,7 +25,7 @@ function AboutUs() {
 								<strong>LCShop</strong> is the official online store of the LoL
 								Championship Series (colloquially known as the LCS) &mdash; a North American
 								franchised league by Riot Games. The physical store is located 
-                                in <a href="https://www.google.com.ph/maps/place/Los+Angeles,+CA,+USA/@34.0207305,-118.6919313,10z/data=!3m1!4b1!4m5!3m4!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0522342!4d-118.2436849?hl=en&authuser=0" target="_blank" rel="noopener noreferrer">Los 
+                                at <a href="https://www.google.com.ph/maps/place/Los+Angeles,+CA,+USA/@34.0207305,-118.6919313,10z/data=!3m1!4b1!4m5!3m4!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4!8m2!3d34.0522342!4d-118.2436849?hl=en&authuser=0" target="_blank" rel="noopener noreferrer">Los 
                                 Angeles, United States</a> and is inside the LCS Arena.
 								For a bit of our league's history, the LCS was formally known as the NA LCS and was
 								changed prior to the EU LCS (European League of Legends Championship Series) rebranding

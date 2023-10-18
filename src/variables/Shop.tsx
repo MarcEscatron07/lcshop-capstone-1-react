@@ -53,7 +53,7 @@ const items: any[] = [
                 price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-clg.webp', 
                 srcBack: 'images/shop/jerseys/jersey-clg-back.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-11-17')
             },
             { 
@@ -63,7 +63,7 @@ const items: any[] = [
                 price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-tl.webp', 
                 srcBack: 'images/shop/jerseys/jersey-tl-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-10-16')
             },
             { 
@@ -73,7 +73,7 @@ const items: any[] = [
                 price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-c9.webp', 
                 srcBack: 'images/shop/jerseys/jersey-c9-back.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-09-15')
             },
             { 
@@ -82,7 +82,7 @@ const items: any[] = [
                 price: 60.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-fox.webp', 
                 srcBack: 'images/shop/jerseys/jersey-fox-back.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-08-14')
             },
             { 
@@ -91,7 +91,7 @@ const items: any[] = [
                 price: 80.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-tsm.png', 
                 srcBack: 'images/shop/jerseys/jersey-tsm-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-07-13')
             },
             { 
@@ -100,7 +100,7 @@ const items: any[] = [
                 price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-fly.png', 
                 srcBack: 'images/shop/jerseys/jersey-fly-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-06-12')
             },
             { 
@@ -109,7 +109,7 @@ const items: any[] = [
                 price: 60.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-opt.png', 
                 srcBack: 'images/shop/jerseys/jersey-opt-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-05-11')
             },
             { 
@@ -118,7 +118,7 @@ const items: any[] = [
                 price: 60.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-clutch.png', 
                 srcBack: 'images/shop/jerseys/jersey-clutch-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-04-10')
             },
             { 
@@ -127,7 +127,7 @@ const items: any[] = [
                 price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-ggs.png', 
                 srcBack: 'images/shop/jerseys/jersey-ggs-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-03-09')
             },
             { 
@@ -136,7 +136,7 @@ const items: any[] = [
                 price: 70.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-100t.png', 
                 srcBack: 'images/shop/jerseys/jersey-100t-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-02-08')
             },
             { 
@@ -145,7 +145,7 @@ const items: any[] = [
                 price: 60.00.toFixed(2), 
                 srcFront: 'images/shop/jerseys/jersey-clg-alt.png', 
                 srcBack: 'images/shop/jerseys/jersey-clg-alt-back.png',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-01-07')
             },
         ]
@@ -159,7 +159,7 @@ const items: any[] = [
                 price: 50.00.toFixed(2), 
                 srcFront: 'images/shop/casual/casual-tee-tl.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-blue.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-11-17')
             },
             {
@@ -168,7 +168,7 @@ const items: any[] = [
                 price: 40.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-clg.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-10-16')
             },
             {
@@ -177,7 +177,7 @@ const items: any[] = [
                 price: 30.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-clutch.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-09-15')
             },
             {
@@ -186,7 +186,7 @@ const items: any[] = [
                 price: 40.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-ggs.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-lightblue.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-08-14')
             },
             {
@@ -195,7 +195,7 @@ const items: any[] = [
                 price: 30.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-opt.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-07-13')
             },
             {
@@ -204,7 +204,7 @@ const items: any[] = [
                 price: 40.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-fly.webp', 
                 srcBack: 'images/shop/casual/casual-tee-back-black.webp',
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-06-12')
             },
             {
@@ -213,7 +213,7 @@ const items: any[] = [
                 price: 20.00.toFixed(2), 
                 srcFront: '/images/shop/casual/casual-tee-summer-finals.webp', 
                 srcBack: null,
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-05-11')
             },
         ]
@@ -228,7 +228,7 @@ const items: any[] = [
                 price: 10.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-wristband.webp', 
                 srcBack: null,
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-11-17')
             },
             {
@@ -238,7 +238,7 @@ const items: any[] = [
                 price: 15.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-mousepad.webp', 
                 srcBack: null,
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-10-16')
             },
             {
@@ -248,7 +248,7 @@ const items: any[] = [
                 price: 5.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-lanyard.webp', 
                 srcBack: null,
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-09-15')
             },
             {
@@ -257,7 +257,7 @@ const items: any[] = [
                 price: 20.00.toFixed(2), 
                 srcFront: '/images/shop/accessories/acc-waterbottle.webp', 
                 srcBack: null,
-                btnText: 'Add To Cart',
+                // btnText: 'Add To Cart',
                 dateAdded: moment('2019-08-14')
             },
         ]

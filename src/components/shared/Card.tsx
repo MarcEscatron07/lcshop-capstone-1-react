@@ -49,7 +49,7 @@ function Card(props: IProps) {
                 </div>
                 <div className="card-footer">
                     <small className="text-muted fw-bold">{props?.price ?? '$0.00'}</small>
-                    <button className="card-button btn btn-primary">{props?.buttonText ?? 'OK'}</button>                                                    
+                    {props?.buttonText ? (<button className="card-button btn btn-primary">{props?.buttonText}</button>) : null}
                 </div>
             </div>
         </>
